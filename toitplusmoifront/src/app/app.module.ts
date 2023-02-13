@@ -8,6 +8,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     ConnexionComponent,
     InscriptionComponent,
     ProfilComponent,
-    AccueilComponent
+    AccueilComponent,
+    AjoutbienComponent
   ],
   imports: [
     BrowserModule,

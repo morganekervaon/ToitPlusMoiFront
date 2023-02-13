@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { AccueilComponent } from './accueil/accueil.component';
     ConnexionComponent,
     InscriptionComponent,
     ProfilComponent,
-    AccueilComponent
+    AccueilComponent,
+    AjoutbienComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

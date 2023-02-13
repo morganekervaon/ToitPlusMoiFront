@@ -17,7 +17,7 @@ import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
     InscriptionComponent,
     ProfilComponent,
     AccueilComponent,
-    AjoutbienComponent
+    AjoutbienComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,9 @@
-<p>ajoutbien works!</p>
+<div class="container">
+    <h5 class="text-info">Ajout d'un nouveau bien</h5>
+    <form #appart="ngForm" (ngSubmit)="createAppart(appart.value)">
+        <div class="md-form">
+            <input type="radio" name="meuble" ngModel="" class="form-control">
+            <input type="text" name="meuble" ngModel="" class="form-control">
+        </div>
+        <button class="btn btn secondary btn-sm">Valider</button>
+    </form>

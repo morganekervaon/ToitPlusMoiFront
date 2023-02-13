@@ -1,1 +1,13 @@
-<p>connexion works!</p>
+<div style="margin: auto; width: 30%; margin-top: 100px;">
+    <div class="card p-4 z-dep-2">
+        <form #co="ngForm" (ngSubmit)="connexion(co.value)">
+            <div class="md-form">
+                <input type="text" class="form-control" placeholder="Login" name="login" ngModel>
+            </div>
+            <div class="md-form">
+                <input type="password" class="form-control" placeholder="password" name="password" ngModel>
+            </div>
+            <button class="btn btn-secondary btn-block btn-sm">Connexion</button>
+        </form>
+    </div>
+</div>

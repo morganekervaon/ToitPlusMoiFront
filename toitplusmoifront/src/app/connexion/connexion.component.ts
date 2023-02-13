@@ -22,13 +22,11 @@ export class ConnexionComponent implements OnInit {
         next: (data) => { this.user = data },
         error: (err) => { console.log(err) }
       })
-      console.log(val);
-      console.log(this.user);
-      if (!this.user === null) {
+      if (this.user == null) {
+        console.log("Connexion ratée");
+      } else {
         console.log("Connexion réussie");
         this.route.navigateByUrl('accueil');
-      } else {
-        console.log("Connexion ratée");
       }
     } else {
       console.log("remplis non ?");

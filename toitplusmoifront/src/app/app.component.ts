@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'toitplusmoifront';
 
-  constructor(private http: HttpClient, private route: Router) { }
+  /*constructor(private http: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
     this.route.navigateByUrl("accueil")
-  }
+  }*/
 
 }

@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-connexion',
   templateUrl: './connexion.component.html',
   styleUrls: ['./connexion.component.css']
 })
-export class ConnexionComponent {
+export class ConnexionComponent implements OnInit {
+  constructor() { }
+  ngOnInit(): void {
 
+  }
+
+  connexion(val: any) {
+    console.log(val)
+  }
 }

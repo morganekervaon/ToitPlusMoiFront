@@ -9,7 +9,6 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
-import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { MenuComponent } from './menu/menu.component';
     ProfilComponent,
     AccueilComponent,
     AjoutbienComponent,
-    MenuComponent
   ],
   imports: [
     BrowserModule,

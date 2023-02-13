@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./connexion.component.css']
 })
 export class ConnexionComponent implements OnInit {
-  constructor() { }
+
+  log: any;
+  constructor(private http: HttpClient) { }
+
   ngOnInit(): void {
 
   }
 
   connexion(val: any) {
-    console.log(val)
+    this.http.get('http://localhost:8183/login').subscribe({
+      next: (data) => { this.log = data; },
+      error: (err) => { console.log(err) }
+    })
   }
 }

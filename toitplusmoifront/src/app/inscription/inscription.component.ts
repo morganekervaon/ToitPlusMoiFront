@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.component.html',
   styleUrls: ['./inscription.component.css']
 })
-export class InscriptionComponent {
+export class InscriptionComponent implements OnInit {
+
+  constructor(private http: HttpClient, private route : Router) {}
+  ngOnInit(): void {
+  }
+
+  inscrireUser(val: any){
+
+  }
 
 }

@@ -8,15 +8,15 @@ import { AuthService } from './auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'toitplusmoifront';
-  userConnect: any;
+  public userConnect: any;
   constructor(private http: HttpClient, private route: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
+    this.userConnect = this.authService.getUserConnect();
     if (!this.authService.isConnected()) {
       this.route.navigateByUrl('connexion');
     }
   }
-
 }

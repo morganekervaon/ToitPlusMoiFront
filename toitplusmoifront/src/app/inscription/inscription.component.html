@@ -3,11 +3,11 @@
         <h3 class="text-info">Création de profil</h3>
             <p>Je suis :</p>
             <div>
-                <input type="radio" id="locataire" name="statut" value="locataire">
+                <input type="radio" id="locataire" name="proprio" value="false" [(ngModel)]="status">
                 <label for="locataire">Locataire</label>
             </div>
             <div>
-                <input type="radio" id="proprietaire" name="statut" value="locataire">
+                <input type="radio" id="proprietaire" name="proprio" value="true" [(ngModel)]="status">
                 <label for="proprietaire">Propriétaire</label>
             </div>
         <div class="md-form">

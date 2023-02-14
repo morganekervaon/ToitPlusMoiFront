@@ -1,1 +1,154 @@
-<p>filtre works!</p>
+<div class="container">
+    <form #filtre="ngForm" (ngSubmit)="paramFiltre(filtre.value)">
+        <h3 class="text-info">Paramétrer ses filtres</h3>
+        <p>Type d'appartement</p>
+        <div>
+            <div>
+                <input type="radio" id="T1" name="statut" value="locataire">
+                <label for="locataire">T1</label>
+            </div>
+            <div>
+                <input type="radio" id="T2" name="statut" value="locataire">
+                <label for="proprietaire">T2</label>
+            </div>
+            <div>
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">T3</label>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <p>Code postal</p>
+        <div>
+            <div>
+                <input type="radio" id="T1" name="statut" value="locataire">
+                <label for="locataire">75001</label>
+
+                <input type="radio" id="T2" name="statut" value="locataire">
+                <label for="proprietaire">75002</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">75003</label>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <p>Meublé</p>
+        <div>
+            <div>
+                <input type="radio" id="T1" name="statut" value="locataire">
+                <label for="locataire">Meublé</label>
+            </div>
+            <div>
+                <input type="radio" id="T2" name="statut" value="locataire">
+                <label for="proprietaire">Non meublé</label>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>Classe NRJ</p>
+            <div class="md-form">
+                <label for="">Classe NRJ min</label>
+                <input type="text" name="nom" ngModel class="form-control">
+            </div>
+            <div class="md-form">
+                <label for="">Classe NRJ max</label>
+                <input type="text" name="prenom" ngModel class="form-control">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>Surface</p>
+            <div class="md-form">
+                <label for="">Surface min</label>
+                <input type="text" name="nom" ngModel class="form-control">
+            </div>
+            <div class="md-form">
+                <label for="">Surface max</label>
+                <input type="text" name="prenom" ngModel class="form-control">
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>Disponibilité</p>
+            <div class="md-form">
+                <label for="">Date</label>
+                <input type="text" name="prenom" ngModel class="form-control">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>Nombre de chambre</p>
+            <div class="md-form">
+                <label for="">Nombre min</label>
+                <input type="text" name="nom" ngModel class="form-control">
+            </div>
+            <div class="md-form">
+                <label for="">Nombre max</label>
+                <input type="text" name="prenom" ngModel class="form-control">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>Prix</p>
+            <div class="md-form">
+                <label for="">Prix max</label>
+                <input type="text" name="prenom" ngModel class="form-control">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>Exposition</p>
+            <div class="md-form">
+                <label for="">Nord, Sud, etc</label>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p>En plus</p>
+            <div>
+                <input type="radio" id="T1" name="statut" value="locataire">
+                <label for="locataire">Ascenseur</label>
+
+                <input type="radio" id="T2" name="statut" value="locataire">
+                <label for="proprietaire">Machine à laver</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">Lave vaisselle</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">Jardin</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">Parking</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">Cave</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">Balcon</label>
+
+                <input type="radio" id="T3" name="statut" value="locataire">
+                <label for="proprietaire">Salle d'eau</label>
+            </div>
+        </div>
+        <button class="btn btn-sm">Enregistrer</button>
+    </form>
+</div>

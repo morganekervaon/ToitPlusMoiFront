@@ -8,6 +8,7 @@ import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
 import { FiltreComponent } from './filtre/filtre.component';
 import { AuthgardService } from './authgard.service';
 import { MainComponent } from './main/main.component';
+import { DossierComponent } from './dossier/dossier.component';
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'ajoutbien', canActivate: [AuthgardService], component: AjoutbienComponent },
   { path: 'filtre', canActivate: [AuthgardService], component: FiltreComponent },
   { path: 'main', canActivate: [AuthgardService], component: MainComponent },
-  { path: '', redirectTo: 'accueil', pathMatch: 'full' }
+  { path: '', redirectTo: 'accueil', pathMatch: 'full' },
+  { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
 ];
 
 

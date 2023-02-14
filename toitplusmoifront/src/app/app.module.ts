@@ -11,6 +11,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
 import { FiltreComponent } from './filtre/filtre.component';
 import { MainComponent } from './main/main.component';
+import { DossierComponent } from './dossier/dossier.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MainComponent } from './main/main.component';
     AccueilComponent,
     AjoutbienComponent,
     FiltreComponent,
-    MainComponent
+    MainComponent,
+    DossierComponent
   ],
   imports: [
     BrowserModule,

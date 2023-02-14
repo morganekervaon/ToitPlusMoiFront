@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-filtre',
@@ -21,13 +22,16 @@ export class FiltreComponent implements OnInit {
   status: any;
   dateDispo: any;
 
-  constructor(private http: HttpClient, private route: Router) { }
-
+  constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
+  public userConnect = this.authService.getUserConnect();
   ngOnInit(): void {
 
   }
 
   paramFiltre(val: any) {
+    let critere = {
+      user: this.userConnect
+    };
     console.log(val);
     // this.dateDispo.toISOString().split("T")[0];
     this.http.post('http://localhost:8183/filtre', val).subscribe({

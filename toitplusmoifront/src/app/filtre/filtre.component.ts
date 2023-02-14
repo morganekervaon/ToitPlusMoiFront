@@ -8,6 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./filtre.component.css']
 })
 export class FiltreComponent implements OnInit {
+  type: any = [];
+  meuble: any;
+  ascenseur: any;
+  machineALaver: any;
+  laveVaisselle: any;
+  jardin: any;
+  parking: any;
+  cave: any;
+  balcon: any;
+  salleEau: any;
+  status: any;
+  dateDispo: any;
 
   constructor(private http: HttpClient, private route: Router) { }
 
@@ -16,9 +28,9 @@ export class FiltreComponent implements OnInit {
   }
 
   paramFiltre(val: any) {
-    let filtre = {};
-    console.log(filtre);
-    this.http.post('http://localhost:8183/filtre', filtre).subscribe({
+    console.log(val);
+    // this.dateDispo.toISOString().split("T")[0];
+    this.http.post('http://localhost:8183/filtre', val).subscribe({
       next: (data) => {
         console.log(data);
         this.route.navigateByUrl('profil')

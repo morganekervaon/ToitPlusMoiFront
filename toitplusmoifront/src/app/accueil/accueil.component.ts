@@ -13,6 +13,6 @@ export class AccueilComponent implements OnInit {
   constructor(public authService: AuthService, private route: Router) { };
 
   ngOnInit(): void {
-
+    this.userConnect = this.authService.getUserConnect();
   }
 }

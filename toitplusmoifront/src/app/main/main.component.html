@@ -1,1 +1,12 @@
-<p>Bonjour {{userConnect.prenom}}</p>
+<br><br>
+<div class="container">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" *ngIf="userConnect!=null">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <strong>Bonjour {{userConnect.prenom}}, </strong> bienvenue sur notre app !
+        </div>
+    </div>
+</div>

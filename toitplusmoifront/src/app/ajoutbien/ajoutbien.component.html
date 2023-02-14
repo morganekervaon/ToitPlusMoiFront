@@ -1,8 +1,68 @@
 <div class="container">
-    <h5 class="text-info">Ajout d'un nouveau bien</h5>
+    <br>
+    <h5 class="text-info" style="text-align:center; font: size 30px">Ajout d'un nouveau bien</h5>
+    <br>
     <form #appart="ngForm" (ngSubmit)="createAppart(appart.value)">
-        <div class="md-form">
-            <input type="radio" name="meuble" ngModel="" class="form-control">
+
+        <div class="md-form; table-responsive">
+
+            <table class="table align-center; table-borderless">
+
+                <tr style="margin: auto; width: 100%; margin-top: 100px; font-size: 20px;">
+
+                    <td style="text-align:center">
+                        <div class="text-info" style="font-size: 20px">Meublé</div>
+                    </td>
+                    <td style="text-align:center">
+                        <div class="text-info" style="font-size: 20px ">Machine à laver </div>
+                    </td>
+                    <td style="text-align:center">
+                        <div class="text-info" style="font-size: 20px">Jardin </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%" height="20"> <input type="checkbox" name="meuble" ngModel="" class="form-control">
+                    </td>
+
+                    <td width="33%" height="20"> <input type="checkbox" name="machinealaver" ngModel=""
+                            class="form-control"></td>
+
+                    <td width="33%" height="20"> <input type="checkbox" name="jardin" ngModel="" class="form-control">
+                    </td>
+
+                </tr><br>
+                <tr style="margin: auto; width: 100%; margin-top: 100px; font-size: 20px;">
+
+                    <td style="text-align:center">
+                        <div class="text-info" style="font-size: 20px">Accessibilité</div>
+                    </td>
+                    <td style="text-align:center">
+                        <div class="text-info" style="font-size: 20px ">Balcon </div>
+                    </td>
+                    <td style="text-align:center">
+                        <div class="text-info" style="font-size: 20px">Cave </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" name="accessibilite" ngModel="" class="form-control"></td>
+                    <td> <input type="checkbox" name="balcon" ngModel="" class="form-control"></td>
+                    <td> <input type="checkbox" name="cave" ngModel="" class="form-control"></td>
+                </tr>
+            </table>
+            <div class="text-info" style="font-size: 20px;text-align:center">Consommation énergétique</div>
+            <div class="input-group mb-7; table-responsive">
+                <div class="input-group-prepend" id="button-addon7">
+                    <button class="btn btn-outline-secondary" type="button">A</button>
+                    <button class="btn btn-outline-secondary" type="button">B</button>
+                    <button class="btn btn-outline-secondary" type="button">C</button>
+                    <button class="btn btn-outline-secondary" type="button">D</button>
+                    <button class="btn btn-outline-secondary" type="button">E</button>
+                    <button class="btn btn-outline-secondary" type="button">F</button>
+                    <button class="btn btn-outline-secondary" type="button">G</button>
+                </div>
+
+            </div>
+            <div class="text-info" style="font-size: 20px ;text-align:center">Meublé</div>
             <input type="text" name="meuble" ngModel="" class="form-control">
         </div>
         <button class="btn btn secondary btn-sm">Valider</button>

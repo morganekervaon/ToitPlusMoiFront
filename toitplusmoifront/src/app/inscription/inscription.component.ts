@@ -13,7 +13,7 @@ export class InscriptionComponent implements OnInit {
   constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
   ngOnInit(): void {
     if (this.authService.isConnected()) {
-      this.route.navigateByUrl('accueil');
+      this.route.navigateByUrl('main');
     }
   }
 

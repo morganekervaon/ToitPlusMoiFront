@@ -16,7 +16,7 @@ export class ConnexionComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.authService.isConnected()) {
-      this.route.navigateByUrl('accueil');
+      this.route.navigateByUrl('main');
     }
   }
 
@@ -29,7 +29,7 @@ export class ConnexionComponent implements OnInit {
             this.msgErr = "Mauvais identifiants";
           } else {
             this.authService.setUserConnect(this.user);
-            this.route.navigateByUrl('accueil');
+            this.route.navigateByUrl('main');
           }
         },
         error: (err) => { console.log(err) }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'toitplusmoifront';
-
-  /*constructor(private http: HttpClient, private route: Router) { }
+  userConnect: any;
+  constructor(private http: HttpClient, private route: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
-    this.route.navigateByUrl("accueil")
-  }*/
+    if (!this.authService.isConnected()) {
+      this.route.navigateByUrl('connexion');
+    }
+  }
 
 }

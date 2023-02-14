@@ -15,7 +15,9 @@ export class ConnexionComponent implements OnInit {
   constructor(private http: HttpClient, private route: Router, private AuthService: AuthService) { }
 
   ngOnInit(): void {
-
+    if (this.AuthService.isConnected()) {
+      this.route.navigateByUrl('accueil');
+    }
   }
 
   connexion(val: any) {

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-connexion',
@@ -9,8 +10,9 @@ import { Router } from '@angular/router';
 })
 export class ConnexionComponent implements OnInit {
 
+  msgErr: any;
   private user: any;
-  constructor(private http: HttpClient, private route: Router) { }
+  constructor(private http: HttpClient, private route: Router, private AuthService: AuthService) { }
 
   ngOnInit(): void {
 
@@ -19,17 +21,19 @@ export class ConnexionComponent implements OnInit {
   connexion(val: any) {
     if (val.login !== '' && val.mdp !== '') {
       this.http.post('http://localhost:8183/login', val).subscribe({
-        next: (data) => { this.user = data },
+        next: (data) => {
+          this.user = data;
+          if (this.user == null) {
+            this.msgErr = "Mauvais identifiants";
+          } else {
+            this.AuthService.setUserConnect(this.user);
+            this.route.navigateByUrl('accueil');
+          }
+        },
         error: (err) => { console.log(err) }
       })
-      if (this.user == null) {
-        console.log("Connexion ratée");
-      } else {
-        console.log("Connexion réussie");
-        this.route.navigateByUrl('accueil');
-      }
     } else {
-      console.log("remplis non ?");
+      this.msgErr = "Veuillez remplir tous les champs";
     }
   }
 }

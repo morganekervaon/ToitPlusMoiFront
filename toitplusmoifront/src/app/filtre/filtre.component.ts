@@ -16,7 +16,7 @@ export class FiltreComponent implements OnInit {
   }
 
   paramFiltre(val: any) {
-    let filtre;
+    let filtre = {};
     console.log(filtre);
     this.http.post('http://localhost:8183/filtre', filtre).subscribe({
       next: (data) => {

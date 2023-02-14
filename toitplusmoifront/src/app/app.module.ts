@@ -10,6 +10,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
 import { FiltreComponent } from './filtre/filtre.component';
+import { DossierComponent } from './dossier/dossier.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FiltreComponent } from './filtre/filtre.component';
     ProfilComponent,
     AccueilComponent,
     AjoutbienComponent,
-    FiltreComponent
+    FiltreComponent,
+    DossierComponent
   ],
   imports: [
     BrowserModule,

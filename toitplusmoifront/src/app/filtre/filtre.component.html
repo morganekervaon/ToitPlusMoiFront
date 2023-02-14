@@ -1,154 +1,160 @@
-<div class="container">
-    <form #filtre="ngForm" (ngSubmit)="paramFiltre(filtre.value)">
-        <h3 class="text-info">Paramétrer ses filtres</h3>
-        <p>Type d'appartement</p>
-        <div>
+<div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
+    <div class="card p-5 z-dep-2">
+        <form #filtre="ngForm" (ngSubmit)="paramFiltre(filtre.value)">
+            <h3 class="text-info">Paramétrer ses filtres</h3>
+            <p>Type d'appartement</p>
             <div>
-                <input type="radio" id="T1" name="statut" value="locataire">
-                <label for="locataire">T1</label>
+                <div>
+                    <input type="checkbox" id="T1" name="type" value="T1" [(ngModel)]="type">
+                    <label for="T1">T1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="T2" name="type" value="T2" [(ngModel)]="type">
+                    <label for="T2">T2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="T3" name="type" value="T3" [(ngModel)]="type">
+                    <label for="T3">T3</label>
+                </div>
             </div>
+            <br>
+            <hr>
+            <br>
+            <!-- <p>Code postal</p>
             <div>
-                <input type="radio" id="T2" name="statut" value="locataire">
-                <label for="proprietaire">T2</label>
+                <div>
+                    <input type="radio" id="T1" name="codePostal" value="codePostal">
+                    <label for="paris1">75001</label>
+
+                    <input type="radio" id="T2" name="codePostal" value="codePostal">
+                    <label for="paris2">75002</label>
+
+                    <input type="radio" id="T3" name="codePostal" value="codePostal">
+                    <label for="paris3">75003</label>
+                </div>
             </div>
+            <br>
+            <hr>
+            <br> -->
+            <p>Meublé</p>
             <div>
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">T3</label>
+                <div>
+                    <input type="radio" id="meuble" name="meuble" value="true" [(ngModel)]="meuble">
+                    <label for="meuble">Meublé</label>
+                </div>
+                <div>
+                    <input type="radio" id="nonMeuble" name="meuble" value="false" [(ngModel)]="meuble">
+                    <label for="nomMeuble">Non meublé</label>
+                </div>
             </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <p>Code postal</p>
-        <div>
+            <br>
+            <hr>
+            <br>
             <div>
-                <input type="radio" id="T1" name="statut" value="locataire">
-                <label for="locataire">75001</label>
-
-                <input type="radio" id="T2" name="statut" value="locataire">
-                <label for="proprietaire">75002</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">75003</label>
+                <p>Classe NRJ</p>
+                <div class="md-form">
+                    <label for="">Classe NRJ min</label>
+                    <input type="text" name="classeNRJmin" ngModel class="form-control">
+                </div>
+                <div class="md-form">
+                    <label for="">Classe NRJ max</label>
+                    <input type="text" name="classeNRJmax" ngModel class="form-control">
+                </div>
             </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <p>Meublé</p>
-        <div>
+            <br>
+            <hr>
+            <br>
             <div>
-                <input type="radio" id="T1" name="statut" value="locataire">
-                <label for="locataire">Meublé</label>
+                <p>Surface</p>
+                <div class="md-form">
+                    <label for="">Surface min</label>
+                    <input type="number" name="surfaceMin" ngModel class="form-control">
+                </div>
+                <div class="md-form">
+                    <label for="">Surface max</label>
+                    <input type="number" name="surfaceMax" ngModel class="form-control">
+                </div>
             </div>
+
+            <br>
+            <hr>
+            <br>
             <div>
-                <input type="radio" id="T2" name="statut" value="locataire">
-                <label for="proprietaire">Non meublé</label>
+                <p>Disponibilité</p>
+                <div class="md-form">
+                    <label for="">Date</label>
+                    <input type="date" name="dispoBien" ngModel class="form-control" [(ngModel)]="dateDispo">
+                </div>
             </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>Classe NRJ</p>
-            <div class="md-form">
-                <label for="">Classe NRJ min</label>
-                <input type="text" name="nom" ngModel class="form-control">
-            </div>
-            <div class="md-form">
-                <label for="">Classe NRJ max</label>
-                <input type="text" name="prenom" ngModel class="form-control">
-            </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>Surface</p>
-            <div class="md-form">
-                <label for="">Surface min</label>
-                <input type="text" name="nom" ngModel class="form-control">
-            </div>
-            <div class="md-form">
-                <label for="">Surface max</label>
-                <input type="text" name="prenom" ngModel class="form-control">
-            </div>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>Disponibilité</p>
-            <div class="md-form">
-                <label for="">Date</label>
-                <input type="text" name="prenom" ngModel class="form-control">
-            </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>Nombre de chambre</p>
-            <div class="md-form">
-                <label for="">Nombre min</label>
-                <input type="text" name="nom" ngModel class="form-control">
-            </div>
-            <div class="md-form">
-                <label for="">Nombre max</label>
-                <input type="text" name="prenom" ngModel class="form-control">
-            </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>Prix</p>
-            <div class="md-form">
-                <label for="">Prix max</label>
-                <input type="text" name="prenom" ngModel class="form-control">
-            </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>Exposition</p>
-            <div class="md-form">
-                <label for="">Nord, Sud, etc</label>
-            </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <p>En plus</p>
+            <br>
+            <hr>
+            <br>
             <div>
-                <input type="radio" id="T1" name="statut" value="locataire">
-                <label for="locataire">Ascenseur</label>
-
-                <input type="radio" id="T2" name="statut" value="locataire">
-                <label for="proprietaire">Machine à laver</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">Lave vaisselle</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">Jardin</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">Parking</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">Cave</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">Balcon</label>
-
-                <input type="radio" id="T3" name="statut" value="locataire">
-                <label for="proprietaire">Salle d'eau</label>
+                <p>Nombre de chambre</p>
+                <div class="md-form">
+                    <label for="">Nombre min</label>
+                    <input type="number" name="chambreMin" ngModel class="form-control">
+                </div>
+                <div class="md-form">
+                    <label for="">Nombre max</label>
+                    <input type="number" name="chambreMax" ngModel class="form-control">
+                </div>
             </div>
-        </div>
-        <button class="btn btn-sm">Enregistrer</button>
-    </form>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Prix</p>
+                <div class="md-form">
+                    <label for="">Prix max</label>
+                    <input type="number" name="prixMax" ngModel class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Exposition</p>
+                <div class="md-form">
+                    <label for="">Nord, Sud, etc</label>
+                    <input type="text" name="exposition" ngModel class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <div>
+                <p>En plus</p>
+                <div>
+                    <input type="checkbox" id="ascenseur" name="ascenceur" value="true" [(ngModel)]="ascenseur">
+                    <label for="ascenseur">Ascenseur</label>
+
+                    <input type="checkbox" id="machineALaver" name="machineALaver" value="true"
+                        [(ngModel)]="machineALaver">
+                    <label for="proprietaire">Machine à laver</label>
+
+                    <input type="checkbox" id="laveVaisselle" name="laveVaisselle" value="true"
+                        [(ngModel)]="laveVaisselle">
+                    <label for="proprietaire">Lave vaisselle</label>
+
+                    <input type="checkbox" id="jardin" name="jardin" value="true" [(ngModel)]="jardin">
+                    <label for="proprietaire">Jardin</label>
+
+                    <input type="checkbox" id="parking" name="parking" value="true" [(ngModel)]="parking">
+                    <label for="proprietaire">Parking</label>
+
+                    <input type="checkbox" id="cave" name="cave" value="true" [(ngModel)]="cave">
+                    <label for="proprietaire">Cave</label>
+
+                    <input type="checkbox" id="balcon" name="balcon" value="locataire" [(ngModel)]="balcon">
+                    <label for="proprietaire">Balcon</label>
+
+                    <input type="checkbox" id="salleEau" name="salleEau" value="true" [(ngModel)]="salleEau">
+                    <label for="proprietaire">Salle d'eau</label>
+                </div>
+            </div>
+            <button class="btn btn-sm">Enregistrer</button>
+        </form>
+    </div>
 </div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   constructor(private route: Router) { }
+  private user: any;
 
   setUserConnect(user: any) {
     localStorage.setItem('userConnect', JSON.stringify(user));
@@ -30,3 +31,4 @@ export class AuthService {
     this.route.navigateByUrl('accueil');
   }
 }
+

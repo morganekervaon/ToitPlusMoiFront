@@ -14,9 +14,5 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient, private route: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
-    this.userConnect = this.authService.getUserConnect();
-    if (!this.authService.isConnected()) {
-      this.route.navigateByUrl('connexion');
-    }
   }
 }

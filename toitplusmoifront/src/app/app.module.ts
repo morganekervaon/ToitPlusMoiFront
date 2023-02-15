@@ -29,7 +29,10 @@ import { MatSelectModule } from '@angular/material/select';
     FiltreComponent,
     MainComponent,
     DossierComponent,
-    ModificationdossierComponent
+    ModificationdossierComponent,
+    FiltreModifComponent,
+    RechercheAppartComponent,
+    RechercheMaisonComponent
   ],
   imports: [
     BrowserModule,

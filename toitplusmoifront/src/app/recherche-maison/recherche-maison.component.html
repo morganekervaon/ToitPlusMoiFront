@@ -1,1 +1,35 @@
-<p>recherche-maison works!</p>
+<div *ngFor="let m of maison">
+    <div class="card" style="width: 30rem;" *ngIf="m!=null">
+        <!--<img src="..." class="card-img-top" alt="...">-->
+        <div class="card-body center">
+            <h5 class="card-title">Maison de {{m.proprio.prenom}}</h5>
+            <p>{{m.prix}} €</p>
+            <p>{{m.surface}} m²</p>
+            <p class="card-text">Adresse : {{m.adresse.numero}} {{m.adresse.voie}}, {{m.adresse.codePostal}}
+                {{m.adresse.ville}}</p>
+            <p *ngIf="m.meuble">Meublé</p>
+            <p *ngIf="!m.meuble">Non meublé</p>
+            <p>Nombre de chambres : {{m.nbchambres}}</p>
+            <p>Classe énergétique : {{m.classeNRJ}}</p>
+            <p>Disponible le : {{m.date}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item" *ngIf="m.accessibilite">Handicap Friendly</li>
+            <li class="list-group-item" *ngIf="m.cave">Cave</li>
+            <li class="list-group-item">{{m.nbetages}} étage</li>
+            <li class="list-group-item" *ngIf="m.balcon">Balcon</li>
+            <li class="list-group-item" *ngIf="m.jardin">Jardin</li>
+            <li class="list-group-item" *ngIf="m.laveVaisselle">Lave-Vaisselle</li>
+            <li class="list-group-item" *ngIf="m.machineALaver">Machine à laver</li>
+            <li class="list-group-item" *ngIf="m.salleEau">Salle d'eau</li>
+            <li class="list-group-item" *ngIf="m.exposition">Exposition {{m.exposition}}</li>
+            <li class="list-group-item" *ngIf="m.transport">{{m.transport}}</li>
+        </ul>
+        <div class="card-body">
+            <a (click)="recupAnnonce" class="card-link">Passer</a>
+            <a (click)="recupAnnonce" class="card-link">Liker</a>
+            <!--<a (click)="recupAnnonce" class="card-link">SuperLiker</a>-->
+        </div>
+    </div>
+</div>

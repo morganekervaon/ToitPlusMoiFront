@@ -12,6 +12,7 @@ import { AjoutbienComponent } from './ajoutbien/ajoutbien.component';
 import { FiltreComponent } from './filtre/filtre.component';
 import { MainComponent } from './main/main.component';
 import { DossierComponent } from './dossier/dossier.component';
+import { FiltreModifComponent } from './filtre-modif/filtre-modif.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DossierComponent } from './dossier/dossier.component';
     AjoutbienComponent,
     FiltreComponent,
     MainComponent,
-    DossierComponent
+    DossierComponent,
+    FiltreModifComponent
   ],
   imports: [
     BrowserModule,

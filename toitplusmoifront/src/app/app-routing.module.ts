@@ -9,6 +9,7 @@ import { FiltreComponent } from './filtre/filtre.component';
 import { AuthgardService } from './authgard.service';
 import { MainComponent } from './main/main.component';
 import { DossierComponent } from './dossier/dossier.component';
+import { FiltreModifComponent } from './filtre-modif/filtre-modif.component';
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'main', canActivate: [AuthgardService], component: MainComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
+  { path: 'filtre-modif', canActivate: [AuthgardService], component: FiltreModifComponent }
 ];
 
 

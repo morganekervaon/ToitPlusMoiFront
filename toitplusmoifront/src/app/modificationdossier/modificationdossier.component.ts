@@ -17,14 +17,15 @@ export class ModificationdossierComponent implements OnInit {
     this.http.get('http://localhost:8183/dossier/user/' + this.userConnect.id).subscribe({
       next: (data) => {
         this.doss=data;
+        console.log('id est', this.doss);
       },
       error: (err) => {console.log(err);}
     })
   }
-  
+
   modifDossier(doss: any) {
-    doss.locataire= this.userConnect;
-    this.http.put('http://localhost:8183/dossier/' + this.doss.id, doss).subscribe({
+    doss.locataire = this.userConnect;
+    this.http.put('http://localhost:8183/dossier/' + this.doss.id_dossier, doss).subscribe({
       next: (data) => {
         console.log(data);
         this.route.navigateByUrl('profil')

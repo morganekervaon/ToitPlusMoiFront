@@ -21,11 +21,20 @@ export class RechercheAppartComponent implements OnInit {
 
   recupAnnonce() {
     this.http.get('http://localhost:8183/appartement/random').subscribe({
-      next: (data) => {
-        this.appart = data;
-        console.log(this.appart);
-      },
+      next: (data) => { this.appart = data; },
       error: (err) => { console.log(err) }
     })
+  }
+
+  likerAnnonce() {
+    let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
+    console.log(val);
+    this.http.post('http://localhost:8183/likeappart', val)
+  }
+
+  haterAnnonce() {
+    let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
+    console.log(val);
+    this.http.post('http://localhost:8183/hateappart', val)
   }
 }

@@ -29,12 +29,21 @@ export class FiltreComponent implements OnInit {
   }
 
   paramFiltre(val: any) {
-    let critere = {
-      user: this.userConnect
-    };
+    val.user = this.userConnect;
     console.log(val);
-    // this.dateDispo.toISOString().split("T")[0];
     this.http.post('http://localhost:8183/filtre', val).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.route.navigateByUrl('profil')
+      },
+      error: (err) => { console.log(err); }
+    })
+  }
+
+  modifFiltre(val: any) {
+    val.user = this.userConnect;
+    console.log(val);
+    this.http.put('http://localhost:8183/filtre/user/{val.user.id}', val).subscribe({
       next: (data) => {
         console.log(data);
         this.route.navigateByUrl('profil')

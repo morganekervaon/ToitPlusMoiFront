@@ -9,6 +9,7 @@ import { FiltreComponent } from './filtre/filtre.component';
 import { AuthgardService } from './authgard.service';
 import { MainComponent } from './main/main.component';
 import { DossierComponent } from './dossier/dossier.component';
+import { FiltreModifComponent } from './filtre-modif/filtre-modif.component';
 import { RechercheAppartComponent } from './recherche-appart/recherche-appart.component';
 import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.component';
 import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'searchAppart', canActivate: [AuthgardService], component: RechercheAppartComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
+  { path: 'filtre-modif', canActivate: [AuthgardService], component: FiltreModifComponent },
   { path: 'modifdossier', canActivate: [AuthgardService], component: ModificationdossierComponent },
 ];
 

@@ -1,1 +1,35 @@
-<p>recherche-appart works!</p>
+<div *ngFor="let a of appart">
+    <div class="card" style="width: 30rem;" *ngIf="a!=null">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body center">
+            <h5 class="card-title">Appartement de {{a.proprio.prenom}}</h5>
+            <p>{{a.prix}} €</p>
+            <p>{{a.type}} : {{a.surface}} m²</p>
+            <p class="card-text">Adresse : {{a.adresse.numero}} {{a.adresse.voie}}, {{a.adresse.codePostal}}
+                {{a.adresse.ville}}</p>
+            <p *ngIf="a.meuble">Meublé</p>
+            <p *ngIf="!a.meuble">Non meublé</p>
+            <p>Nombre de chambres : {{a.nbchambres}}</p>
+            <p>Classe énergétique : {{a.classeNRJ}}</p>
+            <p>Disponible le : {{a.dispo}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item" *ngIf="appart.cave">Cave</li>
+            <li class="list-group-item" *ngIf="a.ascenseur">Etage {{a.etage}}, avec ascenseur</li>
+            <li class="list-group-item" *ngIf="!a.ascenseur">Etage {{a.etage}}, sans ascenseur</li>
+            <li class="list-group-item" *ngIf="a.balcon">Balcon</li>
+            <li class="list-group-item" *ngIf="a.jardin">Jardin</li>
+            <li class="list-group-item" *ngIf="a.laveVaisselle">Lave-Vaisselle</li>
+            <li class="list-group-item" *ngIf="a.machineALaver">Machine à laver</li>
+            <li class="list-group-item" *ngIf="a.salleEau">Salle d'eau</li>
+            <li class="list-group-item" *ngIf="a.exposition">Exposition {{a.exposition}}</li>
+            <li class="list-group-item" *ngIf="a.transport">{{a.transport}}</li>
+        </ul>
+        <div class="card-body">
+            <a (click)="recupAnnonce" class="card-link">Passer</a>
+            <a (click)="recupAnnonce" class="card-link">Liker</a>
+            <!--<a (click)="recupAnnonce" class="card-link">SuperLiker</a>-->
+        </div>
+    </div>
+</div>

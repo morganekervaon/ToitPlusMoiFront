@@ -2,24 +2,7 @@
     <div class="card p-5 z-dep-2">
         <form #filtre="ngForm" (ngSubmit)="paramFiltre(filtre.value)">
             <h3 class="text-info">Hello {{userConnect.prenom}}, tu peux paramétrer tes filtres ici</h3>
-            <!-- <p>Type d'appartement</p>
-            <div>
-                <div>
-                    <input type="checkbox" id="T1" name="type" value="T1" [(ngModel)]="type">
-                    <label for="T1">T1</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="T2" name="type" value="T2" [(ngModel)]="type">
-                    <label for="T2">T2</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="T3" name="type" value="T3" [(ngModel)]="type">
-                    <label for="T3">T3</label>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br> -->
+
             <!-- <p>Code postal</p>
             <div>
                 <div>
@@ -127,28 +110,25 @@
             <div>
                 <p>En plus</p>
                 <div>
-                    <input type="checkbox" id="ascenseur" name="ascenceur" value="true" [(ngModel)]="ascenseur">
-                    <label for="ascenseur">Ascenseur</label>
-
                     <input type="checkbox" id="machineALaver" name="machineALaver" value="true"
                         [(ngModel)]="machineALaver">
-                    <label for="proprietaire">Machine à laver</label>
+                    <label for="">Machine à laver</label>
 
                     <input type="checkbox" id="laveVaisselle" name="laveVaisselle" value="true"
                         [(ngModel)]="laveVaisselle">
-                    <label for="proprietaire">Lave vaisselle</label>
+                    <label for="">Lave vaisselle</label>
 
                     <input type="checkbox" id="jardin" name="jardin" value="true" [(ngModel)]="jardin">
-                    <label for="proprietaire">Jardin</label>
+                    <label for="">Jardin</label>
 
                     <input type="checkbox" id="parking" name="parking" value="true" [(ngModel)]="parking">
-                    <label for="proprietaire">Parking</label>
+                    <label for="">Parking</label>
 
                     <input type="checkbox" id="cave" name="cave" value="true" [(ngModel)]="cave">
-                    <label for="proprietaire">Cave</label>
+                    <label for="">Cave</label>
 
                     <input type="checkbox" id="balcon" name="balcon" value="locataire" [(ngModel)]="balcon">
-                    <label for="proprietaire">Balcon</label>
+                    <label for="">Balcon</label>
 
                     <input type="checkbox" id="salleEau" name="salleEau" value="true" [(ngModel)]="salleEau">
                     <label for="">Salle d'eau</label>

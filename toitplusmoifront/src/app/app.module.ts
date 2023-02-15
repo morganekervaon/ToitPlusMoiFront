@@ -28,7 +28,10 @@ import { ModificationdossierComponent } from './modificationdossier/modification
     FiltreComponent,
     MainComponent,
     DossierComponent,
-    ModificationdossierComponent
+    ModificationdossierComponent,
+    FiltreModifComponent,
+    RechercheAppartComponent,
+    RechercheMaisonComponent
   ],
   imports: [
     BrowserModule,

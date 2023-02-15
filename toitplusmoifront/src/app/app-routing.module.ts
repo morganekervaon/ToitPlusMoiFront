@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'main', canActivate: [AuthgardService], component: MainComponent },
   { path: 'searchMaison', canActivate: [AuthgardService], component: RechercheMaisonComponent },
   { path: 'searchAppart', canActivate: [AuthgardService], component: RechercheAppartComponent },
+  { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
   { path: 'filtre-modif', canActivate: [AuthgardService], component: FiltreModifComponent },
   { path: 'modifdossier', canActivate: [AuthgardService], component: ModificationdossierComponent },

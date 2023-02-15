@@ -7,10 +7,10 @@
 
 
 .AccueilBody {
-    background-image: url('../images/4354119.jpg') !important;
+    background-image: url('../images/fondAccueil.jpg') !important;
     background-repeat: no-repeat !important;
     background-attachment: local !important;
-    background-size: 60% !important;
+    background-size: cover !important;
     background-position: center !important;
     height: 100vh;
     font-family: HyperBlob;
@@ -19,10 +19,22 @@
 .titleBody h1 {
     font-family: HyperBlob;
     font-size: 12vw !important;
-    color: rgb(230, 101, 15);
+    /*color: rgb(230, 101, 15);*/
+    color: #00A97F;
     text-align: center;
-    padding-top: 10%;
-    padding-bottom: 6%;
+    padding-top: 8%;
+    padding-bottom: 0%;
+}
+
+
+.titleBody h3 {
+    font-family: HyperBlob;
+    font-size: 4vw !important;
+    /*color: rgb(230, 101, 15);*/
+    color: #00A97F;
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 4%;
 }
 
 .InscripConnex {

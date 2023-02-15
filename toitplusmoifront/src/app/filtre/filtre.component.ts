@@ -9,6 +9,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./filtre.component.css']
 })
 export class FiltreComponent implements OnInit {
+
   meuble: any;
   ascenseur: any;
   machineALaver: any;

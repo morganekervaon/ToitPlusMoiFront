@@ -1,24 +1,50 @@
+@font-face {
+    font-family: HyperBlob;
+    src: url('../font/hyperblob.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.AccueilBody {
+    background-image: url('../images/4354119.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-attachment: local !important;
+    background-size: 60% !important;
+    background-position: center !important;
+    height: 100vh;
+    font-family: HyperBlob;
+}
+
+.titleBody h1 {
+    font-family: HyperBlob;
+    font-size: 12vw !important;
+    color: rgb(230, 101, 15);
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 6%;
+}
+
 .InscripConnex {
     font-size: large;
     text-align: center !important;
-    padding-top: 25%;
 }
 
 .btnBox {
-    padding: 3% !important;
+    padding: 2% !important;
 }
 
 .btnInscriConnex {
     --color: #00A97F;
     padding: 0.8em 1.7em;
-    background-color: transparent;
+    background-color: white;
     border-radius: .3em;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: .5s;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.7vw;
     border: 1px solid;
     font-family: inherit;
     text-transform: uppercase;

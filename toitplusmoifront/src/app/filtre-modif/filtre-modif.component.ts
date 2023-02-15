@@ -37,6 +37,7 @@ export class FiltreModifComponent implements OnInit {
     this.http.put('http://localhost:8183/filtre/' + this.critere.id_critere, critere).subscribe({
       next: (data) => {
         this.route.navigateByUrl('profil')
+        console.log(data);
       },
       error: (err) => { console.log(err); }
     })

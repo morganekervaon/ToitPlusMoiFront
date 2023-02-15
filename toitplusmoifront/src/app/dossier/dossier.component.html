@@ -1,1 +1,18 @@
-<p>dossier works!</p>
+<div class="container">
+    <form #user="ngForm">
+        <h3 class="text-info">Création du dossier locataire.</h3>
+        <div class="md-form">
+            <p>Présentation :</p>
+            <input type="text" name="nom" ngModel class="form-control">
+            <label for="">Présentez-vous brièvement :</label>
+        </div>
+        <div class="md-form">
+            <p>Documents importants</p>
+            <br>
+            <label for="">Ces documents ne seront pas communiqués avec les propriétaire sans votre autorisation.</label>
+            <br>
+            <input type="text" name="nom" ngModel class="form-control">
+        </div>
+        <button class="btn btn-sm">Enregistrer</button>
+    </form>
+</div>

@@ -15,6 +15,7 @@ import { DossierComponent } from './dossier/dossier.component';
 import { FiltreModifComponent } from './filtre-modif/filtre-modif.component';
 import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.component';
 import { RechercheAppartComponent } from './recherche-appart/recherche-appart.component';
+import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RechercheAppartComponent } from './recherche-appart/recherche-appart.co
     AjoutbienComponent,
     FiltreComponent,
     MainComponent,
-    DossierComponent
+    DossierComponent,
+    ModificationdossierComponent
   ],
   imports: [
     BrowserModule,

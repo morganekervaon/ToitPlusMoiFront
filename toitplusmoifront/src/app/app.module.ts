@@ -14,6 +14,7 @@ import { MainComponent } from './main/main.component';
 import { DossierComponent } from './dossier/dossier.component';
 import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.component';
 import { RechercheAppartComponent } from './recherche-appart/recherche-appart.component';
+import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RechercheAppartComponent } from './recherche-appart/recherche-appart.co
     MainComponent,
     DossierComponent,
     RechercheMaisonComponent,
-    RechercheAppartComponent
+    RechercheAppartComponent,
+    ModificationdossierComponent
   ],
   imports: [
     BrowserModule,

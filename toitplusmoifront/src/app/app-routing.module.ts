@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { DossierComponent } from './dossier/dossier.component';
 import { RechercheAppartComponent } from './recherche-appart/recherche-appart.component';
 import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.component';
+import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'searchAppart', canActivate: [AuthgardService], component: RechercheAppartComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
+  { path: 'modifdossier', canActivate: [AuthgardService], component: ModificationdossierComponent },
 ];
 
 

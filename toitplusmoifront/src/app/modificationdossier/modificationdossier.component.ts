@@ -22,8 +22,9 @@ export class ModificationdossierComponent implements OnInit {
       error: (err) => {console.log(err);}
     })
   }
-  
+
   modifDossier(doss: any) {
+    doss.locataire = this.userConnect;
     this.http.put('http://localhost:8183/dossier/' + this.doss.id_dossier, doss).subscribe({
       next: (data) => {
         console.log(data);

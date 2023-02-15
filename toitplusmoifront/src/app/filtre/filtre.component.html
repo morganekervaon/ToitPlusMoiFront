@@ -1,7 +1,7 @@
 <div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
     <div class="card p-5 z-dep-2">
         <form #filtre="ngForm" (ngSubmit)="paramFiltre(filtre.value)">
-            <h3 class="text-info">Paramétrer ses filtres</h3>
+            <h3 class="text-info">Hello {{userConnect.prenom}}, tu peux paramétrer tes filtres ici</h3>
             <!-- <p>Type d'appartement</p>
             <div>
                 <div>
@@ -36,7 +36,7 @@
             <br>
             <hr>
             <br> -->
-            <p>Meublé</p>
+            <p><i class="fa-solid fa-chair"></i>Meublé</p>
             <div>
                 <div>
                     <input type="radio" id="meuble" name="meuble" value="true" [(ngModel)]="meuble">
@@ -51,7 +51,7 @@
             <hr>
             <br>
             <div>
-                <p>Classe NRJ</p>
+                <p><i class="fa-regular fa-bolt"></i>Classe NRJ</p>
                 <div class="md-form">
                     <label for="">Classe NRJ min</label>
                     <input type="text" name="classeNRJmin" ngModel class="form-control">
@@ -80,7 +80,7 @@
             <hr>
             <br>
             <div>
-                <p>Disponibilité</p>
+                <p><i class="fa-solid fa-calendar-days"></i>Disponibilité</p>
                 <div class="md-form">
                     <label for="">Date</label>
                     <input type="date" name="dispoBien" ngModel class="form-control" [(ngModel)]="dateDispo">
@@ -151,10 +151,12 @@
                     <label for="proprietaire">Balcon</label>
 
                     <input type="checkbox" id="salleEau" name="salleEau" value="true" [(ngModel)]="salleEau">
-                    <label for="proprietaire">Salle d'eau</label>
+                    <label for="">Salle d'eau</label>
+
+
                 </div>
             </div>
-            <button class="btn btn-sm">Enregistrer</button>
+            <button class="btn btn-sm btn-block btn-sm">Enregistrer</button>
         </form>
     </div>
 </div>

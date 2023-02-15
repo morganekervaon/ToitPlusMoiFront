@@ -9,7 +9,6 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./filtre.component.css']
 })
 export class FiltreComponent implements OnInit {
-  type: any = [];
   meuble: any;
   ascenseur: any;
   machineALaver: any;
@@ -32,18 +31,6 @@ export class FiltreComponent implements OnInit {
     val.user = this.userConnect;
     console.log(val);
     this.http.post('http://localhost:8183/filtre', val).subscribe({
-      next: (data) => {
-        console.log(data);
-        this.route.navigateByUrl('profil')
-      },
-      error: (err) => { console.log(err); }
-    })
-  }
-
-  modifFiltre(val: any) {
-    val.user = this.userConnect;
-    console.log(val);
-    this.http.put('http://localhost:8183/filtre/user/{val.user.id}', val).subscribe({
       next: (data) => {
         console.log(data);
         this.route.navigateByUrl('profil')

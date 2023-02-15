@@ -1,1 +1,123 @@
-<p>filtre-modif works!</p>
+<div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
+    <div class="card p-5 z-dep-2" *ngIf="critere">
+        <form #filtremodif="ngForm" (ngSubmit)="modifFiltre(filtremodif.value)">
+            <h3 class="text-info">Hello {{userConnect.prenom}}, tu peux modifier tes filtres ici</h3>
+            <p><i class="fa-solid fa-chair"></i>Meublé</p>
+            <div>
+                <div>
+                    <input type="radio" id="meuble" name="meuble" value="true" [(ngModel)]="critere.meuble">
+                    <label for="meuble">Meublé</label>
+                </div>
+                <div>
+                    <input type="radio" id="nonMeuble" name="meuble" value="false" [(ngModel)]="critere.meuble">
+                    <label for="nomMeuble">Non meublé</label>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p><i class="fa-regular fa-bolt"></i>Classe NRJ</p>
+                <div class="md-form">
+                    <label for="">Classe NRJ min</label>
+                    <input type="text" name="classeNRJmin" [(ngModel)]="critere.classeNRJmin" class="form-control">
+                </div>
+                <div class="md-form">
+                    <label for="">Classe NRJ max</label>
+                    <input type="text" name="classeNRJmax" [(ngModel)]="critere.classeNRJmax" class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Surface</p>
+                <div class="md-form">
+                    <label for="">Surface min</label>
+                    <input type="number" name="surfaceMin" ngModel class="form-control">
+                </div>
+                <div class="md-form">
+                    <label for="">Surface max</label>
+                    <input type="number" name="surfaceMax" ngModel class="form-control">
+                </div>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p><i class="fa-solid fa-calendar-days"></i>Disponibilité</p>
+                <div class="md-form">
+                    <label for="">Date</label>
+                    <input type="date" name="dispoBien" ngModel class="form-control" [(ngModel)]="critere.dispoBien">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Nombre de chambre</p>
+                <div class="md-form">
+                    <label for="">Nombre min</label>
+                    <input type="number" name="chambreMin" [(ngModel)]="critere.chambreMin" class="form-control">
+                </div>
+                <div class="md-form">
+                    <label for="">Nombre max</label>
+                    <input type="number" name="chambreMax" [(ngModel)]="critere.chambreMax" class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Prix</p>
+                <div class="md-form">
+                    <label for="">Prix max</label>
+                    <input type="number" name="prixMax" [(ngModel)]="critere.prixMax" class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Exposition</p>
+                <div class="md-form">
+                    <label for="">Nord, Sud, etc</label>
+                    <input type="text" name="exposition" [(ngModel)]="critere.exposition" class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <div>
+                <p>En plus</p>
+                <div>
+                    <input type="checkbox" id="machineALaver" name="machineALaver" value="true"
+                        [(ngModel)]="critere.machineALaver">
+                    <label for="">Machine à laver</label>
+
+                    <input type="checkbox" id="laveVaisselle" name="laveVaisselle" value="true"
+                        [(ngModel)]="critere.laveVaisselle">
+                    <label for="">Lave vaisselle</label>
+
+                    <input type="checkbox" id="jardin" name="jardin" value="true" [(ngModel)]="critere.jardin">
+                    <label for="">Jardin</label>
+
+                    <input type="checkbox" id="parking" name="parking" value="true" [(ngModel)]="critere.parking">
+                    <label for="">Parking</label>
+
+                    <input type="checkbox" id="cave" name="cave" value="true" [(ngModel)]="critere.cave">
+                    <label for="">Cave</label>
+
+                    <input type="checkbox" id="balcon" name="balcon" value="locataire" [(ngModel)]="critere.balcon">
+                    <label for="">Balcon</label>
+
+                    <input type="checkbox" id="salleEau" name="salleEau" value="true" [(ngModel)]="critere.salleEau">
+                    <label for="">Salle d'eau</label>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-block btn-sm">Enregistrer les modifications</button>
+        </form>
+    </div>
+</div>

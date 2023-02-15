@@ -40,10 +40,7 @@ import { MatSelectModule } from '@angular/material/select';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatSelectModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

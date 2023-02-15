@@ -1,1 +1,16 @@
-<p>modificationdossier works!</p>
+<div class="container">
+    <form #dossier="ngForm" (ngSubmit)="modifDossier(dossier.value)">
+        <h3 class="text-info">Modification du dossier locataire</h3>
+        <p>Présentation :</p>
+        <div class="md-form" *ngIf="doss">
+            <input type="text" id="pres" name="presentation" class="form-control" [(ngModel)]="doss.presentation">
+            <label for="pres">Présentez-vous brièvement :</label>
+        </div>
+        <p>Documents importants</p>
+        <div class="md-form">
+            <input type="file" name="adresse_pdf" ngModel class="form-control">
+            <p class="input-subtitle">Ces documents ne seront pas communiqués avec les propriétaires sans votre autorisation</p>
+        </div>
+        <button class="btn btn-sm">Enregistrer les modifications</button>
+    </form>
+</div>

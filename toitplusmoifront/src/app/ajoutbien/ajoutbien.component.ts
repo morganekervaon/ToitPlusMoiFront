@@ -1,44 +1,46 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-ajoutbien',
   templateUrl: './ajoutbien.component.html',
   styleUrls: ['./ajoutbien.component.css']
 })
-export class AjoutbienComponent implements OnInit {
 
-  constructor(private http: HttpClient, private route: Router) { }
+export class AjoutbienComponent implements OnInit {
+  meuble: any;
+  classNRJ: any;
+  surface: any;
+  jardin: any;/**/
+  parking: any;/**/
+  cave: any;/**/
+  balcon: any;/**/
+  salleEau: any;/**/
+  status: any;
+  Dispo: any;
+  nbchambres: any;
+  etages: any;
+  prix: any;
+  date: any;
+  transport: any;
+  exposition: any;
+  machineALaver: any;/**/
+  laveVaisselle: any;/**/
+  accessibilite: any;/**/
+
+
+  constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
+  public userConnect = this.authService.getUserConnect();
   ngOnInit(): void { }
   createAppart(val: any) {
-    let user = { id: 2 };
-    let appart = {
-      meuble: val.meuble,
-      classNRJ: val.classNRJ,
-      surface: val.surface,
-      nbchambres: val.nbchambres,
-      nbetages: val.nbetages,
-      prix: val.prix,
-      date: val.date,
-      transport: val.transport,
-      exposition: val.exposition,
-      machinealaver: val.machinealaver,
-      jardin: val.jardin,
-      cave: val.cave,
-      balcon: val.balcon,
-      laveVaisselle: val.laveVaisselle,
-      salleEau: val.salleEau,
-      accessibilite: val.accessibilite
+    val.proprio = this.userConnect;
+    /*affiche le proprio dans la console */
+    console.log(val);
 
-    };
-
-
-
-    console.log('l envois', appart);/*cette ligne sert à faire quand on inspecte le site internet,
-     voir dans la console si contenu prend une valeur*/
-
-    this.http.post('http://localhost:8183/ajoutbien', appart).subscribe({
+    this.http.post('http://localhost:8183/ajoutbien', val).subscribe({
       next: (data) => {
         console.log(data);
         this.route.navigateByUrl('home');

@@ -1,1 +1,16 @@
-<p>dossier works!</p>
+<div class="container">
+    <form #dossier="ngForm" (ngSubmit)="saveDossier(dossier.value)">
+        <h3 class="text-info">Création du dossier locataire</h3>
+        <p>Présentation :</p>
+        <div class="md-form">
+            <input type="text" id="pres" name="presentation" ngModel class="form-control">
+            <label for="pres">Présentez-vous brièvement :</label>
+        </div>
+        <p>Documents importants</p>
+        <div class="md-form">
+            <input type="file" id="pdf" name="pdf" ngModel class="form-control">
+            <p class="input-subtitile">Ces documents ne seront pas communiqués avec les propriétaire sans votre autorisation.<p>
+        </div>
+        <button class="btn btn-sm">Enregistrer</button>
+    </form>
+</div>

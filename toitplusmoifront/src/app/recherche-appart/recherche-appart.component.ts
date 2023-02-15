@@ -11,7 +11,6 @@ import { AuthService } from '../auth.service';
 export class RechercheAppartComponent implements OnInit {
 
   appart: any;
-  val: any;
   constructor(private authService: AuthService, private route: Router, private http: HttpClient) { };
   private userConnect = this.authService.getUserConnect();
 
@@ -28,12 +27,14 @@ export class RechercheAppartComponent implements OnInit {
   }
 
   likerAnnonce() {
-    this.val = this.userConnect + this.appart;
-    console.log("bonjour", this.val.value);
-    this.http.post('http://localhost:8183/likeappart', this.val)
+    let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
+    console.log(val);
+    this.http.post('http://localhost:8183/likeappart', val)
   }
 
   haterAnnonce() {
-    this.http.post('http://localhost:8183/hateappart', this.val)
+    let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
+    console.log(val);
+    this.http.post('http://localhost:8183/hateappart', val)
   }
 }

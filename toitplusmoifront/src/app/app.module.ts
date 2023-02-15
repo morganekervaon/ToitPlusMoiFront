@@ -16,7 +16,8 @@ import { FiltreModifComponent } from './filtre-modif/filtre-modif.component';
 import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.component';
 import { RechercheAppartComponent } from './recherche-appart/recherche-appart.component';
 import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { ModificationdossierComponent } from './modificationdossier/modification
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

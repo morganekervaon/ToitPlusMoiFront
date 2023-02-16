@@ -1,1 +1,24 @@
-<p>main-proprio works!</p>
+<br><br>
+<div class="container">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" *ngIf="userConnect!=null">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <strong>Bonjour {{userConnect.prenom}}, </strong> bienvenue sur notre app !
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="align-items: center;">
+        <div class="card" style="width: 22 rem;">
+            <div class="card-body">
+                <h5 class="card-title">Les locataires qui ont liké votre logement !</h5>
+                <p class="card-text">Rencontrez les !!</p>
+                <a routerLink="" class="card-link">Lancer les matchs</a>
+            </div>
+        </div>
+    </div>
+</div>

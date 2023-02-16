@@ -18,14 +18,14 @@ export class RechercheMaisonComponent implements OnInit {
   }
 
   recupAnnonce() {
-    this.http.get('http://localhost:8183/maison/random').subscribe({
+    this.http.get('http://localhost:8183/maison/random/' + this.userConnect.id).subscribe({
       next: (data) => { this.maison = data; },
       error: (err) => { console.log(err) }
     })
   }
 
   likerAnnonce() {
-    let val = { likeur: this.userConnect, maisonLiked: this.maison[0] };
+    let val = { likeur: this.userConnect, maisonLiked: this.maison };
     this.http.post('http://localhost:8183/likemaison', val).subscribe({
       next: (data) => { },
       error: (err) => { console.log(err) }
@@ -34,7 +34,7 @@ export class RechercheMaisonComponent implements OnInit {
   }
 
   haterAnnonce() {
-    let val = { likeur: this.userConnect, maisonLiked: this.maison[0] };
+    let val = { likeur: this.userConnect, maisonLiked: this.maison };
     this.http.post('http://localhost:8183/hatemaison', val).subscribe({
       next: (data) => { },
       error: (err) => { console.log(err) }

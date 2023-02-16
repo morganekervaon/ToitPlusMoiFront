@@ -16,18 +16,17 @@ export class RechercheAppartComponent implements OnInit {
 
   ngOnInit(): void {
     this.recupAnnonce();
-
   }
 
   recupAnnonce() {
-    this.http.get('http://localhost:8183/appartement/random').subscribe({
+    this.http.get('http://localhost:8183/appartement/random/' + this.userConnect.id).subscribe({
       next: (data) => { this.appart = data; },
       error: (err) => { console.log(err) }
     });
   }
 
   likerAnnonce() {
-    let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
+    let val = { likeur: this.userConnect, appartLiked: this.appart };
     this.http.post('http://localhost:8183/likeappart', val).subscribe({
       next: (data) => { },
       error: (err) => { console.log(err) }
@@ -36,7 +35,7 @@ export class RechercheAppartComponent implements OnInit {
   }
 
   haterAnnonce() {
-    let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
+    let val = { likeur: this.userConnect, appartLiked: this.appart };
     this.http.post('http://localhost:8183/hateappart', val).subscribe({
       next: (data) => { },
       error: (err) => { console.log(err) }

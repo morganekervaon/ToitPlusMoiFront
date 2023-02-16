@@ -36,3 +36,9 @@
 .footerToit h5 {
     font-family: Mademountain !important;
 }
+
+.navBarApp li a {
+    font-family: Mademountain !important;
+    font-size: 1.3vw;
+    color: #00A97F;
+}

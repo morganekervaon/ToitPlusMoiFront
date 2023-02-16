@@ -13,6 +13,8 @@ import { FiltreModifComponent } from './filtre-modif/filtre-modif.component';
 import { RechercheAppartComponent } from './recherche-appart/recherche-appart.component';
 import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.component';
 import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
+import { MainProprioComponent } from './main-proprio/main-proprio.component';
+import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
   { path: 'filtreModif', canActivate: [AuthgardService], component: FiltreModifComponent },
   { path: 'modifdossier', canActivate: [AuthgardService], component: ModificationdossierComponent },
+  { path: 'mainProprio', canActivate: [AuthgardService], component: MainProprioComponent },
+  { path: 'searchLocataire', canActivate: [AuthgardService], component: RechercheLocataireComponent },
 ];
 
 

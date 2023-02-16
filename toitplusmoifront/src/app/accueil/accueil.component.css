@@ -18,23 +18,23 @@
 
 .titleBody h1 {
     font-family: HyperBlob;
-    font-size: 12vw !important;
+    font-size: 13vw !important;
     /*color: rgb(230, 101, 15);*/
     color: #00A97F;
     text-align: center;
-    padding-top: 8%;
-    padding-bottom: 0%;
+    padding-top: 12% !important;
+    padding-bottom: 5% !important;
 }
 
 
 .titleBody h3 {
     font-family: HyperBlob;
-    font-size: 4vw !important;
+    font-size: 3.5vw !important;
     /*color: rgb(230, 101, 15);*/
     color: #00A97F;
     text-align: center;
-    padding-top: 0%;
-    padding-bottom: 4%;
+    padding-top: 4% !important;
+    padding-bottom: 4% !important;
 }
 
 .InscripConnex {

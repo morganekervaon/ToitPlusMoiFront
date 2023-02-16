@@ -25,11 +25,17 @@ export class ProfilComponent implements OnInit {
   }
 
   openModalFiltre() {
-    const dialogRef = this.dialog.open(FiltreComponent);
+    const dialogRef = this.dialog.open(FiltreComponent, {
+      height: '600px',
+      width: '800px',
+    });
   }
 
   openModalFiltreModif() {
-    const dialogRefModif = this.dialog.open(FiltreModifComponent);
+    const dialogRefModif = this.dialog.open(FiltreModifComponent, {
+      height: '600px',
+      width: '800px',
+    });
   }
 
 }

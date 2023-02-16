@@ -22,13 +22,13 @@
             <li class="list-group-item" *ngIf="m.jardin">Jardin</li>
             <li class="list-group-item" *ngIf="m.laveVaisselle">Lave-Vaisselle</li>
             <li class="list-group-item" *ngIf="m.machineALaver">Machine à laver</li>
-            <li class="list-group-item" *ngIf="m.salleEau">Salle d'eau</li>
-            <li class="list-group-item" *ngIf="m.exposition">Exposition {{m.exposition}}</li>
-            <li class="list-group-item" *ngIf="m.transport">{{m.transport}}</li>
+            <li class="list-group-item" *ngIf="m.salleEau"><i class="fas fa-bath"></i> Salle d'eau</li>
+            <li class="list-group-item" *ngIf="m.exposition"><i class="fas fa-sun"></i> Exposition {{m.exposition}}</li>
+            <li class="list-group-item" *ngIf="m.transport"><i class="fas fa-train"></i> {{m.transport}}</li>
         </ul>
         <div class="card-body">
-            <a (click)="recupAnnonce" class="card-link">Passer</a>
-            <a (click)="recupAnnonce" class="card-link">Liker</a>
+            <a (click)="likerAnnonce()" class="card-link">Passer</a>
+            <a (click)="haterAnnonce()" class="card-link">Liker</a>
             <!--<a (click)="recupAnnonce" class="card-link">SuperLiker</a>-->
         </div>
     </div>

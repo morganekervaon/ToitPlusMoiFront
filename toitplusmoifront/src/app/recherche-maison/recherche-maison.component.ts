@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class RechercheMaisonComponent implements OnInit {
   maison: any;
-  constructor(private http: HttpClient, private authService: AuthService) { };
+  constructor(private http: HttpClient, private authService: AuthService, private route: Router) { };
   private userConnect = this.authService.getUserConnect();
 
   ngOnInit(): void {
@@ -18,11 +19,26 @@ export class RechercheMaisonComponent implements OnInit {
 
   recupAnnonce() {
     this.http.get('http://localhost:8183/maison/random').subscribe({
-      next: (data) => {
-        this.maison = data;
-        console.log(this.maison);
-      },
+      next: (data) => { this.maison = data; },
       error: (err) => { console.log(err) }
     })
+  }
+
+  likerAnnonce() {
+    let val = { likeur: this.userConnect, maisonLiked: this.maison[0] };
+    this.http.post('http://localhost:8183/likemaison', val).subscribe({
+      next: (data) => { },
+      error: (err) => { console.log(err) }
+    });
+    this.ngOnInit();
+  }
+
+  haterAnnonce() {
+    let val = { likeur: this.userConnect, maisonLiked: this.maison[0] };
+    this.http.post('http://localhost:8183/hatemaison', val).subscribe({
+      next: (data) => { },
+      error: (err) => { console.log(err) }
+    });
+    this.ngOnInit();
   }
 }

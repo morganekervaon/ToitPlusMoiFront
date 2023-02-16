@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { MatSelect } from '@angular/material/select';
 
 
 @Component({
@@ -11,25 +12,7 @@ import { AuthService } from '../auth.service';
 })
 
 export class AjoutbienComponent implements OnInit {
-  meuble: any;
-  classNRJ: any;
-  surface: any;
-  jardin: any;/**/
-  parking: any;/**/
-  cave: any;/**/
-  balcon: any;/**/
-  salleEau: any;/**/
-  status: any;
-  Dispo: any;
-  nbchambres: any;
-  etages: any;
-  prix: any;
-  date: any;
-  transport: any;
-  exposition: any;
-  machineALaver: any;/**/
-  laveVaisselle: any;/**/
-  accessibilite: any;/**/
+
 
 
   constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
@@ -40,10 +23,10 @@ export class AjoutbienComponent implements OnInit {
     /*affiche le proprio dans la console */
     console.log(val);
 
-    this.http.post('http://localhost:8183/bien', val).subscribe({
+    this.http.post('http://localhost:8183/appartement', val).subscribe({
       next: (data) => {
         console.log(data);
-        this.route.navigateByUrl('home');
+        this.route.navigateByUrl('accueil');
       },
       error: (err) => { console.log(err); }
     });

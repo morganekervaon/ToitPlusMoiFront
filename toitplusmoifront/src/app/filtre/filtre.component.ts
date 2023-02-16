@@ -3,6 +3,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-filtre',
@@ -10,6 +11,8 @@ import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dial
   styleUrls: ['./filtre.component.css']
 })
 export class FiltreComponent implements OnInit {
+  codePostaux = new FormControl('');
+  CPList: string[] = ['75001', '75002', '75003', '75004', '75005', '75006'];
 
   meuble: any;
   ascenseur: any;

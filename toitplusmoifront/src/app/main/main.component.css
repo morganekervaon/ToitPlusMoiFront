@@ -1,3 +1,47 @@
+@font-face {
+    font-family: HyperBlobOutline;
+    src: url('../font/hyperblob-outline.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: HyperBlob;
+    src: url('../font/hyperblob.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.MainLocBody {
+    background-color: rgb(255, 255, 255, 0.6) !important;
+    background-image: url('../images/2205_w037_n003_358b_p1_358.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-attachment: local !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+    /*font-family: HyperBlob !important;*/
+}
+
+.BGBody {
+    background-color: rgba(253, 227, 240, 0.5) !important;
+    height: 100vh;
+}
+
+.titleMainLoc {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+}
+
+.titleMainLoc h2 {
+    font-family: HyperBlob !important;
+    text-align: center !important;
+    font-size: 5vw;
+    color: #00A97F;
+    /*color: rgb(33, 107, 91);*/
+}
+
 /*Rainbow card*/
 .cardStyleG {
     --background: #f5f5f5;

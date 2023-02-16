@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MainProprioComponent } from './main-proprio/main-proprio.component';
+import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { MainProprioComponent } from './main-proprio/main-proprio.component';
     FiltreModifComponent,
     RechercheAppartComponent,
     RechercheMaisonComponent,
-    MainProprioComponent
+    MainProprioComponent,
+    RechercheLocataireComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { MainProprioComponent } from './main-proprio/main-proprio.component';
     HttpClientModule,
 
     BrowserAnimationsModule,
-
+    MatSelectModule,
     MatDialogModule
 
   ],

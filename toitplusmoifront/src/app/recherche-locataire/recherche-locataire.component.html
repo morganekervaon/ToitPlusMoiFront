@@ -1,4 +1,7 @@
-<div *ngFor="let l of locataire">
+<div class="d-flex justify-content-center m-5" *ngFor="let l of locataire">
+    <div class="card" style="width: 30rem;" *ngIf="l==null">
+        <p>Il n'y a plus de locataires à voir :/</p>
+    </div>
     <div class="card" style="width: 30rem;" *ngIf="l!=null">
         <div class="card-body center">
             <h5 class="card-title">Dossier de {{l.prenom}} {{l.nom}}</h5>

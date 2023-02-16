@@ -30,6 +30,7 @@ export class RechercheAppartComponent implements OnInit {
     let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
     console.log(val);
     this.http.post('http://localhost:8183/likeappart', val);
+    this.recupAnnonce();
     this.route.navigateByUrl('searchAppart');
   }
 

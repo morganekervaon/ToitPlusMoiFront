@@ -1,34 +1,40 @@
-<br><br>
-<div class="container">
-    <div class="row justify-content-center align-items-center g-2">
-        <div class="alert alert-primary alert-dismissible fade show" role="alert" *ngIf="userConnect!=null">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <strong>Bonjour {{userConnect.prenom}}, </strong> bienvenue sur notre app !
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-6" style="align-items: center;">
-            <div class="card cardStyleG" style="width: 22rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Les apparts chauds de ta région</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-                    <p class="card-text">Recontrez les !!</p>
-                    <a routerLink="../searchAppart" class="card-link">Lancer la recherche</a>
+<div class="MainLocBody">
+    <div class="BGBody">
+        <br><br>
+        <div class="container">
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="alert alert-primary alert-dismissible fade show" role="alert" *ngIf="userConnect!=null">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <strong>Bonjour {{userConnect.prenom}}, </strong> bienvenue sur notre app !
                 </div>
             </div>
         </div>
-        <div class="col-6">
-            <div class="card cardStyleD" style="width: 22rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Les maisons chaudes de ta région</h5>
-                    <p class="card-text">Recontrez les !!</p>
-                    <a routerLink="../searchMaison" class="card-link">Lancer la recherche</a>
+        <div class="titleMainLoc">
+            <h2>Prêt à trouver <br> <br> la location de tes rêves ?</h2>
+        </div>
+        <div class="container">
+            <div class="row" style="margin-top: 8% ;">
+                <div class="col-6" style="padding-left: 15%">
+                    <div class="card cardStyleG" style="width: 83%">
+                        <div class="card-body">
+                            <h5 class="card-title">Les apparts chauds de ta région</h5>
+                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                            <p class="card-text">Recontrez les !!</p>
+                            <a routerLink="../searchAppart" class="card-link">Lancer la recherche</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style=" padding-left: 7.2%; padding-right: 9.5%;">
+                    <div class="card cardStyleD" style="width: 83%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Les maisons chaudes de ta région</h5>
+                            <p class="card-text">Recontrez les !!</p>
+                            <a routerLink="../searchMaison" class="card-link">Lancer la recherche</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

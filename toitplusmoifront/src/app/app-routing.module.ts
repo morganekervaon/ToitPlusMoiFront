@@ -15,8 +15,10 @@ import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.co
 import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
 import { MainProprioComponent } from './main-proprio/main-proprio.component';
 import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
+import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 
 const routes: Routes = [
+  { path: 'ajoutmaison', canActivate: [AuthgardService], component: AjoutmaisonComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'inscription', component: InscriptionComponent },

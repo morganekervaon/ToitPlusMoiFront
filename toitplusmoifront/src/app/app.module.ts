@@ -27,6 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MainProprioComponent } from './main-proprio/main-proprio.component';
 import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
+import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { RechercheLocataireComponent } from './recherche-locataire/recherche-loc
     RechercheMaisonComponent,
     MainProprioComponent,
     RechercheLocataireComponent,
+    AjoutmaisonComponent,
   ],
   imports: [
     BrowserModule,

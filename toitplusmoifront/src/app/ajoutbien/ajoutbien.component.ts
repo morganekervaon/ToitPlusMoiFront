@@ -20,7 +20,7 @@ export class AjoutbienComponent implements OnInit {
   adresse_id: any;
   createAppart(val: any) {
     val.proprio = this.userConnect;
-    val.adresse = { ville: val.ville, codePostal: val.codePostal }
+    val.adresse = { ville: val.ville, codePostal: val.codePostal, numero: val.numero, voie: val.voie }
 
     /*affiche le proprio dans la console */
     console.log(val);

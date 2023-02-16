@@ -1,8 +1,17 @@
 <div class="d-flex justify-content-center m-5">
-    <div class="card" style="width: 30rem;" *ngIf="maison==null">
-        <p>Il n'y a plus de maison qui pourraient te convenir :/</p>
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="maison==null">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>Il n'y a plus de maisons qui pourraient te convenir :(<i
+                        class="fas fa-face-sad-tear"></i></strong>
+            </div>
+        </div>
     </div>
-    <div class="card " style="width: 30rem;" *ngIf="maison!=null">
+    <div class=" card " style=" width: 30rem;" *ngIf="maison!=null">
         <img src="../../assets/images/cabane.jpg" class="card-img-top" alt="photo cabane">
         <div class="card-body center">
             <h5 class="card-title">Maison de {{maison.proprio.prenom}}</h5>
@@ -29,7 +38,8 @@
             <li class="list-group-item" *ngIf="maison.salleEau"><i class="fas fa-bath"></i> Salle d'eau</li>
             <li class="list-group-item" *ngIf="maison.exposition"><i class="fas fa-sun"></i> Exposition
                 {{maison.exposition}}</li>
-            <li class="list-group-item" *ngIf="maison.transport"><i class="fas fa-train"></i> {{maison.transport}}</li>
+            <li class="list-group-item" *ngIf="maison.transport"><i class="fas fa-train"></i>
+                {{maison.transport}}</li>
         </ul>
         <div class="card-body">
             <a (click)="likerAnnonce()" class="card-link">Passer</a>

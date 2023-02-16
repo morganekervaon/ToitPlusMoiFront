@@ -1,13 +1,12 @@
 <div class="d-flex justify-content-center m-5">
-    <div class="container">
+    <div class="container" *ngIf="maison==null">
         <div class="row justify-content-center align-items-center g-2">
-            <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="maison==null">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     <span class="sr-only">Close</span>
                 </button>
-                <strong>Il n'y a plus de maisons qui pourraient te convenir :(<i
-                        class="fas fa-face-sad-tear"></i></strong>
+                <strong>Il n'y a plus de maisons qui pourraient te convenir :(</strong>
             </div>
         </div>
     </div>

@@ -1,23 +1,22 @@
-<br><br>
-<div class="container">
-    <div class="row justify-content-center align-items-center g-2">
-        <div class="alert alert-primary alert-dismissible fade show" role="alert" *ngIf="userConnect!=null">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <strong>Bonjour {{userConnect.prenom}}, </strong> bienvenue sur notre app !
+<div class="MainProBody">
+    <div class="BGBody">
+        <div class="titleMainPro">
+            <h2 class="p-4 mt-4">Et si tu trouvais </h2>
+            <h2 class=" p-3">le locataire idéal ?</h2>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="row" style="align-items: center;">
-        <div class="card" style="width: 22 rem;">
-            <div class="card-body">
-                <h5 class="card-title">Les locataires qui ont liké votre logement !</h5>
-                <p class="card-text">Rencontrez les !!</p>
-                <a routerLink="" class="card-link">Lancer les matchs</a>
+
+
+        <div class="container p-3 mt-5" style="margin-left: 34%;">
+            <div class="row" style="align-items: center;">
+                <div class="card cardStyle" style="width: 35%; height: 40vh;">
+                    <div class="card-body">
+                        <h5 class="card-title p-2">Par ici les locataires qui ont aimé votre logement</h5>
+                        <p class="card-text">"On ne choisit pas forcément son gendre idéal, mais tu peux choisir ton
+                            locataire"</p>
+                        <a routerLink="" class="card-link">Lance les matchs et allez voir un match !</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

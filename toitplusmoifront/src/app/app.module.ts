@@ -44,7 +44,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
 
     BrowserAnimationsModule,
-
+    MatSelectModule,
     MatDialogModule
 
   ],

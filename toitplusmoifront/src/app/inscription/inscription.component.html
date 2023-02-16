@@ -1,6 +1,6 @@
 <div class="container" style="margin: auto; width: 80%; margin-top: 5%; margin-bottom: 5%;">
     <form #user="ngForm" (ngSubmit)="inscrireUser(user.value)">
-        <h3 class="text-info">Création de profil</h3>
+        <h3 class="text-info">Rejoignez-nous et louer !</h3>
         <p>Je suis :</p>
         <div>
             <input type="radio" id="locataire" name="proprio" value="false" [(ngModel)]="status">
@@ -28,8 +28,10 @@
         </div>
         <div class="md-form">
             <label for="">Mot de passe :</label>
-            <input type="password" name="password" ngModel class="form-control">
+            <input type="password" name="mdp" ngModel class="form-control">
         </div>
-        <button (click)="onNoClick()" class="btn btn-sm">S'inscrire</button>
+        <div class="btnSigninDiv">
+            <button (click)="onNoClick()" class="btn btn-sm btnSignin">S'inscrire</button>
+        </div>
     </form>
 </div>

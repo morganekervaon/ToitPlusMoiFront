@@ -13,7 +13,7 @@
             <div>
                 <h4 class="text-info" style="text-align: center;">Adresse</h4>
                 <div class="md-form">
-                    <label for="">Numéro</label>
+                    <label for="numero">Numéro</label>
                     <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="numero" ngModel=""
                         class="form-control">
                 </div>
@@ -21,14 +21,14 @@
                 <hr>
                 <br>
                 <div class="md-form">
-                    <label for="">Rue</label>
+                    <label for="rue">Rue</label>
                     <input type="text" name="voie" ngModel="" class="form-control">
                 </div>
                 <br>
                 <hr>
                 <br>
                 <div class="md-form">
-                    <label for="">Code Postal</label>
+                    <label for="codePostal">Code Postal</label>
                     <input type="number" min="10000" min="99999" oninput="this.value = Math.round(this.value);"
                         name="codePostal" ngModel="" class="form-control">
 
@@ -36,7 +36,7 @@
                 <hr>
                 <br>
                 <div class="md-form">
-                    <label for="">Ville</label>
+                    <label for="ville">Ville</label>
                     <input type="text" name="ville" ngModel="" class="form-control">
 
                 </div>
@@ -94,7 +94,7 @@
             <div>
 
                 <div class="md-form">
-                    <label for="">Date de disponibilité</label>
+                    <label for="dispo">Date de disponibilité</label>
                     <input type="date" name="Dispo" ngModel="" class="form-control">
                 </div>
             </div>
@@ -164,45 +164,45 @@
 
                         <div class="col">
                             <input type="checkbox" id="machineALaver" name="machineALaver" value="true" ngModel="">
-                            <label for="proprietaire"> Machine à laver</label>
+                            <label for="machineALaver"> Machine à laver</label>
                         </div>
 
                         <div class="col">
                             <input type="checkbox" id="laveVaisselle" name="laveVaisselle" value="true" ngModel="">
-                            <label for="proprietaire"> Lave vaisselle</label>
+                            <label for="laveVaisselle"> Lave vaisselle</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col">
                             <input type="checkbox" id="jardin" name="jardin" value="true" ngModel="">
-                            <label for="proprietaire"> Jardin</label>
+                            <label for="jardin"> Jardin</label>
                         </div>
 
                         <div class="col">
                             <input type="checkbox" id="parking" name="parking" value="true" ngModel="">
-                            <label for="proprietaire"> Parking</label>
+                            <label for="parking"> Parking</label>
                         </div>
 
                         <div class="col">
                             <input type="checkbox" id="cave" name="cave" value="true" ngModel="">
-                            <label for="proprietaire"> Cave</label>
+                            <label for="cave"> Cave</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col col-4">
-                            <input type="checkbox" id="balcon" name="balcon" ngModel="">
+                            <input type="checkbox" id="balcon" name="balcon" value="true" ngModel="">
                             <label for="balcon"> Balcon</label>
                         </div>
 
                         <div class="col col-4">
                             <input type="checkbox" id="salleEau" name="salleEau" value="true" ngModel="">
-                            <label for=""> Salle d'eau</label>
+                            <label for="salleEau"> Salle d'eau</label>
                         </div>
                         <div class="col col-4">
                             <input type="checkbox" id="accessibilite" name="accessibilite" value="true" ngModel="">
-                            <label for=""> Accessibilite</label>
+                            <label for="accessibilite"> Accessibilite</label>
                         </div>
                     </div>
 

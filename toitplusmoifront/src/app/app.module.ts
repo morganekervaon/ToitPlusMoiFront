@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { FormControl, FormsModule, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -44,20 +44,16 @@ import { RechercheLocataireComponent } from './recherche-locataire/recherche-loc
     RechercheAppartComponent,
     RechercheMaisonComponent,
     MainProprioComponent,
-    RechercheLocataireComponent
+    RechercheLocataireComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FormGroup,
     BrowserAnimationsModule,
     MatSelectModule,
     MatDialogModule,
-    FormBuilder,
-    FormControl
-
   ],
   providers: [],
   bootstrap: [AppComponent]

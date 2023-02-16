@@ -1,7 +1,10 @@
 <div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
     <div class="card p-5 z-dep-2">
 
-        <form #adresse="ngForm" (ngSubmit)="createAdresse(adresse.value)">
+
+
+
+        <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
             <h3 class="text-info" style="text-align: center;">Hello {{userConnect.prenom}}, tu peux enregistrer un
                 appartement ici</h3>
             <br>
@@ -27,32 +30,26 @@
                 <div class="md-form">
                     <label for="">Code Postal</label>
                     <input type="number" min="10000" min="99999" oninput="this.value = Math.round(this.value);"
-                        name="codePostal" ngModel class="form-control">
+                        name="codePostal" ngModel="" class="form-control">
 
                 </div><br>
                 <hr>
                 <br>
                 <div class="md-form">
                     <label for="">Ville</label>
-                    <input type="text" name="ville" ngModel class="form-control">
+                    <input type="text" name="ville" ngModel="" class="form-control">
 
                 </div>
 
 
             </div>
-        </form>
-
-
-
-        <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
-
 
             <br>
             <hr>
             <br>
             <div>
                 <div>
-                    <input type="radio" id="meuble" name="meuble" value="true">
+                    <input type="radio" id="meuble" name="meuble" ngModel="" value="true">
                     <label for="meuble">Meublé</label>
                 </div>
                 <div>
@@ -66,7 +63,7 @@
             <div>
                 <mat-form-field>
                     <mat-label>Classe energétique</mat-label>
-                    <mat-select value="classNRJ" name="classNRJ">
+                    <mat-select value="classNRJ" name="classNRJ" ngModel="">
                         <mat-option>Inconnue</mat-option>
                         <mat-option value="A">A</mat-option>
                         <mat-option value="B">B</mat-option>
@@ -85,8 +82,8 @@
 
                 <div class="md-form">
                     <label for="">Surface en m²</label>
-                    <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="surface" ngModel
-                        class="form-control">
+                    <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="surface"
+                        ngModel="" class="form-control">
                 </div>
 
             </div>
@@ -195,8 +192,8 @@
 
                     <div class="row">
                         <div class="col col-4">
-                            <input type="checkbox" id="balcon" name="balcon" value="locataire" ngModel="">
-                            <label for="proprietaire"> Balcon</label>
+                            <input type="checkbox" id="balcon" name="balcon" ngModel="">
+                            <label for="balcon"> Balcon</label>
                         </div>
 
                         <div class="col col-4">
@@ -217,7 +214,7 @@
             <div>
                 <mat-form-field>
                     <mat-label>Exposition</mat-label>
-                    <mat-select value="exposition">
+                    <mat-select value="exposition" ngModel="" name="exposition">
                         <mat-option>Inconnue</mat-option>
                         <mat-option value="Sud">Sud</mat-option>
                         <mat-option value="Sud-Est">Sud-Est</mat-option>
@@ -233,8 +230,8 @@
             <br>
             <hr>
             <br>
-
+            <button class="btn btn-sm btn-block btn-sm">Enregistrer</button>
         </form>
-        <button class="btn btn-sm btn-block btn-sm">Enregistrer</button>
+
     </div>
 </div>

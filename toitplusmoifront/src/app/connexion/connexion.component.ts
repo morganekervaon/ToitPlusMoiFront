@@ -29,8 +29,14 @@ export class ConnexionComponent implements OnInit {
           if (this.user == null) {
             this.msgErr = "Mauvais identifiants";
           } else {
-            this.authService.setUserConnect(this.user);
-            this.route.navigateByUrl('main');
+            if (this.user.proprio) {
+              this.authService.setUserConnect(this.user);
+              this.route.navigateByUrl('mainProprio');
+            } else {
+              this.authService.setUserConnect(this.user);
+              this.route.navigateByUrl('main');
+            }
+
           }
         },
         error: (err) => { console.log(err) }

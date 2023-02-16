@@ -1,13 +1,8 @@
-<div>
+<div *ngIf="authService.isConnected()">
   <ul class="nav nav-fill w-100">
     <li class="nav-item">
       <a class="nav-link" routerLink="accueil"><i class="fas fa-igloo"> Accueil</i></a>
     </li>
-    <!-- <li class="nav-item">
-      <a class="nav-link" routerLink="accueil">
-        <img src="logo_site.png" alt="Accueil">
-      </a>
-    </li> -->
     <li class="nav-item">
       <a class=" nav-link" routerLink="profil"><i class="fas fa-user"> Profil</i></a>
     </li>
@@ -19,4 +14,19 @@
     </li>
   </ul>
 </div>
+
+<div *ngIf="!authService.isConnected()">
+  <ul class="nav nav-fill w-100">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="accueil"><i class="fas fa-igloo"> Accueil</i></a>
+    </li>
+    <li class="nav-item">
+      <a class=" nav-link" routerLink="profil"><i class="fas fa-user"> Profil</i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=""><i class="fas fa-power-off " (click)="authService.deconnexion()"> Déconnexion</i></a>
+    </li>
+  </ul>
+</div>
+
 <router-outlet></router-outlet>

@@ -11,8 +11,11 @@ import { AuthService } from './auth.service';
 export class AppComponent implements OnInit {
   title = 'toitplusmoifront';
   public userConnect: any;
+
   constructor(private http: HttpClient, private route: Router, public authService: AuthService) { }
 
   ngOnInit(): void {
   }
+
+
 }

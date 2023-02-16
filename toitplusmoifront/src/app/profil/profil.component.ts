@@ -16,6 +16,12 @@ export class ProfilComponent implements OnInit {
   constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialog: MatDialog) { }
   public userConnect = this.authService.getUserConnect();
   ngOnInit(): void {
+    if (this.userConnect.proprio) {
+      this.route.navigateByUrl('profilProprio');
+    } else {
+      this.route.navigateByUrl('profil');
+    }
+
     this.http.get('http://localhost:8183/critere/user' + this.userConnect.id).subscribe({
       next: (data) => {
         this.critere = data;

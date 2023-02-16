@@ -17,7 +17,12 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.authService.isConnected()) {
-      this.route.navigateByUrl('main');
+      this.userConnect = this.authService.getUserConnect();
+      if (this.userConnect.proprio) {
+        this.route.navigateByUrl('mainProprio');
+      } else {
+        this.route.navigateByUrl('main');
+      }
     }
   }
 

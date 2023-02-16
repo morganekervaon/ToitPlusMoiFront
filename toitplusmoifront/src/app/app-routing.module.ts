@@ -15,6 +15,8 @@ import { RechercheMaisonComponent } from './recherche-maison/recherche-maison.co
 import { ModificationdossierComponent } from './modificationdossier/modificationdossier.component';
 import { MainProprioComponent } from './main-proprio/main-proprio.component';
 import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
+import { MenuComponent } from './menu/menu.component';
+import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'modifdossier', canActivate: [AuthgardService], component: ModificationdossierComponent },
   { path: 'mainProprio', canActivate: [AuthgardService], component: MainProprioComponent },
   { path: 'searchLocataire', canActivate: [AuthgardService], component: RechercheLocataireComponent },
+  { path: 'menu', component: MenuComponent },
+  { path: 'profilProprio', canActivate: [AuthgardService], component: ProfilProprioComponent }
 ];
 
 

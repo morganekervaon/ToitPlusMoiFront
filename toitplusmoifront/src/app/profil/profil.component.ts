@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { FiltreComponent } from '../filtre/filtre.component';
 import { FiltreModifComponent } from '../filtre-modif/filtre-modif.component';
 import { AuthService } from '../auth.service';
+import { MatchsComponent } from '../matchs/matchs.component';
 
 @Component({
   selector: 'app-profil',
@@ -39,6 +40,12 @@ export class ProfilComponent implements OnInit {
 
   openModalFiltreModif() {
     const dialogRefModif = this.dialog.open(FiltreModifComponent, {
+      height: '600px',
+      width: '800px',
+    });
+  }
+  openModalMatchs() {
+    const dialogRef = this.dialog.open(MatchsComponent, {
       height: '600px',
       width: '800px',
     });

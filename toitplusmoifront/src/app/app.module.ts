@@ -30,6 +30,7 @@ import { RechercheLocataireComponent } from './recherche-locataire/recherche-loc
 import { MenuComponent } from './menu/menu.component';
 import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
 import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
+import { MatchsComponent } from './matchs/matchs.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
     MenuComponent,
     ProfilProprioComponent,
     AjoutmaisonComponent,
+    MatchsComponent,
   ],
   imports: [
     BrowserModule,

@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'mainProprio', canActivate: [AuthgardService], component: MainProprioComponent },
   { path: 'searchLocataire', canActivate: [AuthgardService], component: RechercheLocataireComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'profilProprio', canActivate: [AuthgardService], component: ProfilProprioComponent }
+  { path: 'profilProprio', canActivate: [AuthgardService], component: ProfilProprioComponent },
   { path: 'matchs', canActivate: [AuthgardService], component: MatchsComponent },
 ];
 

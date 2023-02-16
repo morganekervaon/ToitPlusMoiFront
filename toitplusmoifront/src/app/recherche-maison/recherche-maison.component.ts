@@ -19,27 +19,26 @@ export class RechercheMaisonComponent implements OnInit {
 
   recupAnnonce() {
     this.http.get('http://localhost:8183/maison/random').subscribe({
-      next: (data) => {
-        this.maison = data;
-        console.log(this.maison);
-      },
+      next: (data) => { this.maison = data; },
       error: (err) => { console.log(err) }
     })
   }
 
   likerAnnonce() {
     let val = { likeur: this.userConnect, maisonLiked: this.maison[0] };
-    console.log(val);
-    this.http.post('http://localhost:8183/likemaison', val);
-    this.recupAnnonce();
-    this.route.navigateByUrl('searchMaison');
+    this.http.post('http://localhost:8183/likemaison', val).subscribe({
+      next: (data) => { },
+      error: (err) => { console.log(err) }
+    });
+    this.ngOnInit();
   }
 
   haterAnnonce() {
     let val = { likeur: this.userConnect, maisonLiked: this.maison[0] };
-    console.log(val);
-    this.http.post('http://localhost:8183/hatemaison', val);
-    this.recupAnnonce();
-    this.route.navigateByUrl('searchMaison');
+    this.http.post('http://localhost:8183/hatemaison', val).subscribe({
+      next: (data) => { },
+      error: (err) => { console.log(err) }
+    });
+    this.ngOnInit();
   }
 }

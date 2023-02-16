@@ -17,15 +17,15 @@
             <li class="list-group-item"></li>
             <li class="list-group-item" *ngIf="a.accessibilite">Handicap Friendly</li>
             <li class="list-group-item" *ngIf="a.cave">Cave</li>
-            <li class="list-group-item" *ngIf="a.ascenseur">Etage {{a.etage}}, avec ascenseur</li>
+            <li class="list-group-item" *ngIf="a.ascenseur"> Etage {{a.etage}}, avec ascenseur</li>
             <li class="list-group-item" *ngIf="!a.ascenseur">Etage {{a.etage}}, sans ascenseur</li>
             <li class="list-group-item" *ngIf="a.balcon">Balcon</li>
             <li class="list-group-item" *ngIf="a.jardin">Jardin</li>
             <li class="list-group-item" *ngIf="a.laveVaisselle">Lave-Vaisselle</li>
             <li class="list-group-item" *ngIf="a.machineALaver">Machine à laver</li>
-            <li class="list-group-item" *ngIf="a.salleEau">Salle d'eau</li>
-            <li class="list-group-item" *ngIf="a.exposition">Exposition {{a.exposition}}</li>
-            <li class="list-group-item" *ngIf="a.transport">{{a.transport}}</li>
+            <li class="list-group-item" *ngIf="a.salleEau"><i class="fas fa-bath"></i> Salle d'eau</li>
+            <li class="list-group-item" *ngIf="a.exposition"><i class="fas fa-sun"></i> Exposition {{a.exposition}}</li>
+            <li class="list-group-item" *ngIf="a.transport"><i class="fas fa-train"></i> {{a.transport}}</li>
         </ul>
         <div class="card-body">
             <a (click)="haterAnnonce()" class="card-link">Passer</a>

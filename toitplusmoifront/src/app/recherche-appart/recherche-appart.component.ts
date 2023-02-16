@@ -23,21 +23,24 @@ export class RechercheAppartComponent implements OnInit {
     this.http.get('http://localhost:8183/appartement/random').subscribe({
       next: (data) => { this.appart = data; },
       error: (err) => { console.log(err) }
-    })
+    });
   }
 
   likerAnnonce() {
     let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
-    console.log(val);
-    this.http.post('http://localhost:8183/likeappart', val);
-    this.route.navigateByUrl('searchAppart');
+    this.http.post('http://localhost:8183/likeappart', val).subscribe({
+      next: (data) => { },
+      error: (err) => { console.log(err) }
+    })
+    this.ngOnInit();
   }
 
   haterAnnonce() {
     let val = { likeur: this.userConnect, appartLiked: this.appart[0] };
-    console.log(val);
-    this.http.post('http://localhost:8183/hateappart', val);
-    this.recupAnnonce();
-    this.route.navigateByUrl('searchAppart');
+    this.http.post('http://localhost:8183/hateappart', val).subscribe({
+      next: (data) => { },
+      error: (err) => { console.log(err) }
+    });
+    this.ngOnInit();
   }
 }

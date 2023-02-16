@@ -1,35 +1,40 @@
-<div *ngFor="let m of maison">
-    <div class="card" style="width: 30rem;" *ngIf="m!=null">
+<div>
+    <div class="card" style="width: 30rem;" *ngIf="maison==null">
+        <p>Il n'y a plus de maison qui pourraient te convenir :/</p>
+    </div>
+    <div class="card" style="width: 30rem;" *ngIf="maison!=null">
         <!--<img src="..." class="card-img-top" alt="...">-->
         <div class="card-body center">
-            <h5 class="card-title">Maison de {{m.proprio.prenom}}</h5>
-            <p>{{m.prix}} €</p>
-            <p>{{m.surface}} m²</p>
-            <p class="card-text">Adresse : {{m.adresse.numero}} {{m.adresse.voie}}, {{m.adresse.codePostal}}
-                {{m.adresse.ville}}</p>
-            <p *ngIf="m.meuble">Meublé</p>
-            <p *ngIf="!m.meuble">Non meublé</p>
-            <p>Nombre de chambres : {{m.nbchambres}}</p>
-            <p>Classe énergétique : {{m.classeNRJ}}</p>
-            <p>Disponible le : {{m.date}}</p>
+            <h5 class="card-title">Maison de {{maison.proprio.prenom}}</h5>
+            <p>{{maison.prix}} €</p>
+            <p>{{maison.surface}} m²</p>
+            <p class="card-text">Adresse : {{maison.adresse.numero}} {{maison.adresse.voie}},
+                {{maison.adresse.codePostal}}
+                {{maison.adresse.ville}}</p>
+            <p *ngIf="maison.meuble">Meublé</p>
+            <p *ngIf="!maison.meuble">Non meublé</p>
+            <p>Nombre de chambres : {{maison.nbchambres}}</p>
+            <p>Classe énergétique : {{maison.classeNRJ}}</p>
+            <p>Disponible le : {{maison.date}}</p>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"></li>
-            <li class="list-group-item" *ngIf="m.accessibilite">Handicap Friendly</li>
-            <li class="list-group-item" *ngIf="m.cave">Cave</li>
-            <li class="list-group-item">{{m.nbetages}} étage</li>
-            <li class="list-group-item" *ngIf="m.balcon">Balcon</li>
-            <li class="list-group-item" *ngIf="m.jardin">Jardin</li>
-            <li class="list-group-item" *ngIf="m.laveVaisselle">Lave-Vaisselle</li>
-            <li class="list-group-item" *ngIf="m.machineALaver">Machine à laver</li>
-            <li class="list-group-item" *ngIf="m.salleEau"><i class="fas fa-bath"></i> Salle d'eau</li>
-            <li class="list-group-item" *ngIf="m.exposition"><i class="fas fa-sun"></i> Exposition {{m.exposition}}</li>
-            <li class="list-group-item" *ngIf="m.transport"><i class="fas fa-train"></i> {{m.transport}}</li>
+            <li class="list-group-item" *ngIf="maison.accessibilite">Handicap Friendly</li>
+            <li class="list-group-item" *ngIf="maison.cave">Cave</li>
+            <li class="list-group-item">{{maison.nbetages}} étage</li>
+            <li class="list-group-item" *ngIf="maison.balcon">Balcon</li>
+            <li class="list-group-item" *ngIf="maison.jardin">Jardin</li>
+            <li class="list-group-item" *ngIf="maison.laveVaisselle">Lave-Vaisselle</li>
+            <li class="list-group-item" *ngIf="maison.machineALaver">Machine à laver</li>
+            <li class="list-group-item" *ngIf="maison.salleEau"><i class="fas fa-bath"></i> Salle d'eau</li>
+            <li class="list-group-item" *ngIf="maison.exposition"><i class="fas fa-sun"></i> Exposition
+                {{maison.exposition}}</li>
+            <li class="list-group-item" *ngIf="maison.transport"><i class="fas fa-train"></i> {{maison.transport}}</li>
         </ul>
         <div class="card-body">
             <a (click)="likerAnnonce()" class="card-link">Passer</a>
             <a (click)="haterAnnonce()" class="card-link">Liker</a>
-            <!--<a (click)="recupAnnonce" class="card-link">SuperLiker</a>-->
+            <!--<a (click)="" class="card-link">SuperLiker</a>-->
         </div>
     </div>
 </div>

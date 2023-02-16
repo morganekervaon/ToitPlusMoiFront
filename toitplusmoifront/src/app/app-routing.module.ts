@@ -17,8 +17,10 @@ import { MainProprioComponent } from './main-proprio/main-proprio.component';
 import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
+import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 
 const routes: Routes = [
+  { path: 'ajoutmaison', canActivate: [AuthgardService], component: AjoutmaisonComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'inscription', component: InscriptionComponent },

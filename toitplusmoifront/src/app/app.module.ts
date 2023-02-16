@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { FormsModule } from '@angular/forms';
+
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +29,7 @@ import { MainProprioComponent } from './main-proprio/main-proprio.component';
 import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
+import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 
 @NgModule({
   declarations: [
@@ -44,18 +49,17 @@ import { ProfilProprioComponent } from './profil-proprio/profil-proprio.componen
     MainProprioComponent,
     RechercheLocataireComponent,
     MenuComponent,
-    ProfilProprioComponent
+    ProfilProprioComponent,
+    AjoutmaisonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
     BrowserAnimationsModule,
     MatSelectModule,
-    MatDialogModule
-
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

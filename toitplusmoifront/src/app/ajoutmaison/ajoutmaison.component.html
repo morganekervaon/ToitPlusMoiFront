@@ -4,9 +4,9 @@
 
 
 
-        <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
-            <h3 class="text-info" style="text-align: center;">Hello {{userConnect.prenom}}, tu peux enregistrer un
-                appartement ici</h3>
+        <form #maison="ngForm" (ngSubmit)="createMaison(maison.value)">
+            <h3 class="text-info" style="text-align: center;">Hello {{userConnect.prenom}}, tu peux enregistrer une
+                maison ici</h3>
             <br>
             <hr>
             <br>
@@ -94,8 +94,8 @@
             <div>
 
                 <div class="md-form">
-                    <label for="dispo">Date de disponibilité</label>
-                    <input type="date" name="dispo" ngModel="" class="form-control">
+                    <label for="date">Date de disponibilité</label>
+                    <input type="date" name="date" ngModel="" class="form-control">
                 </div>
             </div>
             <br>
@@ -108,7 +108,16 @@
                         ngModel="" class="form-control">
                 </div>
             </div>
-
+            <br>
+            <hr>
+            <br>
+            <div>
+                <div class="md-form">
+                    <label for="">Nombre d'étages</label>
+                    <input type="number" min="0" name="etage" oninput="this.value = Math.round(this.value);" ngModel=""
+                        class="form-control">
+                </div>
+            </div>
             <br>
             <hr>
             <br>
@@ -148,10 +157,11 @@
                 <div class="container">
 
                     <div class="row">
-                        <div class="col">
-                            <input type="checkbox" id="ascenseur" name="ascenseur" value="true" Ngmodel="">
-                            <label for="ascenseur"> Ascenseur</label>
+                        <div class="col ">
+                            <input type="checkbox" id="accessibilite" name="accessibilite" value="true" ngModel="">
+                            <label for="accessibilite"> Accessibilite</label>
                         </div>
+
 
                         <div class="col">
                             <input type="checkbox" id="machineALaver" name="machineALaver" value="true" ngModel="">
@@ -191,10 +201,7 @@
                             <input type="checkbox" id="salleEau" name="salleEau" value="true" ngModel="">
                             <label for="salleEau"> Salle d'eau</label>
                         </div>
-                        <div class="col col-4">
-                            <input type="checkbox" id="accessibilite" name="accessibilite" value="true" ngModel="">
-                            <label for="accessibilite"> Accessibilite</label>
-                        </div>
+
                     </div>
 
                 </div>

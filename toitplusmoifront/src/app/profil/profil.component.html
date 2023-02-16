@@ -19,8 +19,8 @@
           <h5 class="card-title">Filtres de critères</h5>
           <p class="card-text">Tenez à jour vos critères de logement pour s'assurer d'avoir les bonnes annonces
             recommandées.</p>
-          <a routerLink="../filtre" class="card-link">Voir ses critères</a>
-          <a routerLink="../filtreModifModif" class="card-link">Modifier ses critères</a>
+          <a *ngIf="critere" (click)="openModalFiltre()" class="card-link">Voir ses critères</a>
+          <a *ngIf="!critere" (click)="openModalFiltreModif()" class="card-link">Modifier ses critères</a>
         </div>
       </div>
     </div>

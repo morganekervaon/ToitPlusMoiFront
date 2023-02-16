@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-filtre',
@@ -22,7 +23,8 @@ export class FiltreComponent implements OnInit {
   status: any;
   dateDispo: any;
 
-  constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
+  constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialogRef: MatDialogRef<FiltreComponent>,
+  ) { }
   public userConnect = this.authService.getUserConnect();
   ngOnInit(): void {
 
@@ -38,5 +40,9 @@ export class FiltreComponent implements OnInit {
       },
       error: (err) => { console.log(err); }
     })
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }

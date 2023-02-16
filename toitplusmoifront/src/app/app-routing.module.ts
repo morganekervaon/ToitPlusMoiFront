@@ -19,26 +19,28 @@ import { MenuComponent } from './menu/menu.component';
 import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
 import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 import { MatchsComponent } from './matchs/matchs.component';
+import { AuthguarproprioService } from './authguarproprio.service';
+import { AuthgardlocaService } from './authgardloca.service';
 
 const routes: Routes = [
-  { path: 'ajoutmaison', canActivate: [AuthgardService], component: AjoutmaisonComponent },
+  { path: 'ajoutmaison', canActivate: [AuthguarproprioService], component: AjoutmaisonComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'profil', canActivate: [AuthgardService], component: ProfilComponent },
-  { path: 'ajoutbien', canActivate: [AuthgardService], component: AjoutbienComponent },
-  { path: 'filtre', canActivate: [AuthgardService], component: FiltreComponent },
-  { path: 'main', canActivate: [AuthgardService], component: MainComponent },
-  { path: 'searchMaison', canActivate: [AuthgardService], component: RechercheMaisonComponent },
-  { path: 'searchAppart', canActivate: [AuthgardService], component: RechercheAppartComponent },
+  { path: 'ajoutbien', canActivate: [AuthguarproprioService], component: AjoutbienComponent },
+  { path: 'filtre', canActivate: [AuthgardlocaService], component: FiltreComponent },
+  { path: 'main', canActivate: [AuthgardlocaService], component: MainComponent },
+  { path: 'searchMaison', canActivate: [AuthgardlocaService], component: RechercheMaisonComponent },
+  { path: 'searchAppart', canActivate: [AuthgardlocaService], component: RechercheAppartComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
-  { path: 'dossier', canActivate: [AuthgardService], component: DossierComponent },
-  { path: 'filtreModif', canActivate: [AuthgardService], component: FiltreModifComponent },
-  { path: 'modifdossier', canActivate: [AuthgardService], component: ModificationdossierComponent },
-  { path: 'mainProprio', canActivate: [AuthgardService], component: MainProprioComponent },
-  { path: 'searchLocataire', canActivate: [AuthgardService], component: RechercheLocataireComponent },
+  { path: 'dossier', canActivate: [AuthgardlocaService], component: DossierComponent },
+  { path: 'filtreModif', canActivate: [AuthgardlocaService], component: FiltreModifComponent },
+  { path: 'modifdossier', canActivate: [AuthgardlocaService], component: ModificationdossierComponent },
+  { path: 'mainProprio', canActivate: [AuthguarproprioService], component: MainProprioComponent },
+  { path: 'searchLocataire', canActivate: [AuthguarproprioService], component: RechercheLocataireComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'profilProprio', canActivate: [AuthgardService], component: ProfilProprioComponent },
+  { path: 'profilProprio', canActivate: [AuthguarproprioService], component: ProfilProprioComponent },
   { path: 'matchs', canActivate: [AuthgardService], component: MatchsComponent },
 ];
 

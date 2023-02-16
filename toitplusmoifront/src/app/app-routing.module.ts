@@ -18,6 +18,7 @@ import { RechercheLocataireComponent } from './recherche-locataire/recherche-loc
 import { MenuComponent } from './menu/menu.component';
 import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
 import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
+import { MatchsComponent } from './matchs/matchs.component';
 
 const routes: Routes = [
   { path: 'ajoutmaison', canActivate: [AuthgardService], component: AjoutmaisonComponent },
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path: 'mainProprio', canActivate: [AuthgardService], component: MainProprioComponent },
   { path: 'searchLocataire', canActivate: [AuthgardService], component: RechercheLocataireComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'profilProprio', canActivate: [AuthgardService], component: ProfilProprioComponent }
+  { path: 'profilProprio', canActivate: [AuthgardService], component: ProfilProprioComponent },
+  { path: 'matchs', canActivate: [AuthgardService], component: MatchsComponent },
 ];
 
 

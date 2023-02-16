@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-
 @Component({
   selector: 'app-recherche-appart',
   templateUrl: './recherche-appart.component.html',

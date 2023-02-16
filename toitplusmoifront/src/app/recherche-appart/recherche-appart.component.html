@@ -1,9 +1,17 @@
-<div>
-    <div class="card" style="width: 30rem;" *ngIf="appart==null">
-        <p>Il n'y a plus d'appartements qui pourraient te convenir :/</p>
+<div class="d-flex justify-content-center m-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="appart==null">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>Il n'y a plus d'appartements qui pourraient te convenir :(</strong>
+            </div>
+        </div>
     </div>
     <div class="card" style="width: 30rem;" *ngIf="appart!=null">
-        <!--<img src="..." class="card-img-top" alt="...">-->
+        <img src="../../assets/images/appart.jpeg" class="card-img-top" alt="photo appart">
         <div class="card-body center">
             <h5 class="card-title">Appartement de {{appart.proprio.prenom}}</h5>
             <p>{{appart.prix}} €</p>

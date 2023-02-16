@@ -20,7 +20,7 @@ export class ModificationdossierComponent implements OnInit {
         console.log('id est', this.doss);
       },
       error: (err) => {console.log(err);}
-    })
+    });
   }
 
   modifDossier(doss: any) {

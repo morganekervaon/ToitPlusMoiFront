@@ -1,4 +1,4 @@
-<div style="margin: auto; width: 30%; margin-top: 100px;">
+<div style="margin: auto; width: 30%; margin-top: 100px; margin-bottom: 100px;">
     <div class="card p-4 z-dep-2">
         <form #co="ngForm" (ngSubmit)="connexion(co.value)">
             <div class="alert alert-danger" *ngIf="msgErr != null">
@@ -10,9 +10,8 @@
             <div class="md-form">
                 <input type="password" class="form-control" placeholder="password" name="mdp" ngModel>
             </div>
-            <button type="submit" class="btn btn-secondary btn-block btn-sm">Connexion</button>
-            <button type="button" class="btn btn+secondary btn-block btn-sm"
-                routerLink="../inscription">Inscription</button>
+            <button type="submit" class="btn btn-success btn-block btn-sm">Connexion</button>
+            <button type="button" class="btn  btn-block btn-sm" routerLink="../inscription">Inscription</button>
         </form>
     </div>
 </div>

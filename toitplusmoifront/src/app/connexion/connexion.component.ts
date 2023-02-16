@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-connexion',
@@ -13,7 +13,7 @@ export class ConnexionComponent implements OnInit {
 
   msgErr: any;
   private user: any;
-  constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
+  constructor(private http: HttpClient, private route: Router, private authService: AuthService/*, public dialogRefLogin: MatDialogRef<ConnexionComponent>*/) { }
 
   ngOnInit(): void {
     if (this.authService.isConnected()) {
@@ -45,8 +45,9 @@ export class ConnexionComponent implements OnInit {
       this.msgErr = "Veuillez remplir tous les champs";
     }
   }
-
-  /*onNoClick(): void {
-    this.dialogRefLogin.close();
-  }*/
+  /*
+    onNoClick(): void {
+      this.dialogRefLogin.close();
+    }
+  */
 }

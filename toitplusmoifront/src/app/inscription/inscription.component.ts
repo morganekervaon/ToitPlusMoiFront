@@ -10,8 +10,11 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
+
   status: any;
+
   constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialogRefSignin: MatDialogRef<InscriptionComponent>,) { }
+
   ngOnInit(): void {
     if (this.authService.isConnected()) {
       this.route.navigateByUrl('main');

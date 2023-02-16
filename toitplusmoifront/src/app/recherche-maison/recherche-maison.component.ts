@@ -31,6 +31,11 @@ export class RechercheMaisonComponent implements OnInit {
       error: (err) => { console.log(err) }
     });
     this.ngOnInit();
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   haterAnnonce() {
@@ -40,5 +45,10 @@ export class RechercheMaisonComponent implements OnInit {
       error: (err) => { console.log(err) }
     });
     this.ngOnInit();
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }

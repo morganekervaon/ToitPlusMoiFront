@@ -32,6 +32,7 @@ export class RechercheMaisonComponent implements OnInit {
     console.log(val);
     this.http.post('http://localhost:8183/likemaison', val);
     this.recupAnnonce();
+    this.route.navigateByUrl('searchMaison');
   }
 
   haterAnnonce() {
@@ -39,5 +40,6 @@ export class RechercheMaisonComponent implements OnInit {
     console.log(val);
     this.http.post('http://localhost:8183/hatemaison', val);
     this.recupAnnonce();
+    this.route.navigateByUrl('searchMaison');
   }
 }

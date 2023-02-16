@@ -12,12 +12,11 @@ import { AuthService } from '../auth.service';
 
 export class AjoutbienComponent implements OnInit {
 
-
   constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
   public userConnect = this.authService.getUserConnect();
   ngOnInit(): void { }
 
-  adresse_id: any;
+
   createAppart(val: any) {
     val.proprio = this.userConnect;
     val.adresse = { ville: val.ville, codePostal: val.codePostal, numero: val.numero, voie: val.voie }
@@ -25,7 +24,7 @@ export class AjoutbienComponent implements OnInit {
     /*affiche le proprio dans la console */
     console.log(val);
 
-    this.http.get('http://localhost:8183/appartement', val).subscribe({
+    this.http.post('http://localhost:8183/appartement', val).subscribe({
 
       next: (data) => {
         console.log(data);

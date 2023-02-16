@@ -32,11 +32,13 @@
                     </div>
                     <div class="card-body">
                         <ul class="list-group ">
-                            <li class="list-group-item" *ngIf="appart.accessibilite">Handicap Friendly</li>
-                            <li class="list-group-item" *ngIf="appart.cave">Cave</li>
-                            <li class="list-group-item" *ngIf="appart.ascenseur"> Etage {{appart.etage}}, avec ascenseur
+                            <li class="list-group-item" *ngIf="appart.accessibilite"><i
+                                    class="fab fa-accessible-icon"></i> Handicap Friendly
                             </li>
-                            <li class="list-group-item" *ngIf="!appart.ascenseur">Etage {{appart.etage}}, sans ascenseur
+                            <li class="list-group-item" *ngIf="appart.cave">Cave</li>
+                            <li class="list-group-item" *ngIf="appart.ascenseur">Avec ascenseur
+                            </li>
+                            <li class="list-group-item" *ngIf="!appart.ascenseur">Sans ascenseur
                             </li>
                             <li class="list-group-item" *ngIf="appart.balcon">Balcon</li>
                             <li class="list-group-item" *ngIf="appart.jardin">Jardin</li>

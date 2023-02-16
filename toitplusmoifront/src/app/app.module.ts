@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, FormGroup } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -46,7 +46,7 @@ import { RechercheLocataireComponent } from './recherche-locataire/recherche-loc
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+    FormGroup,
     BrowserAnimationsModule,
     MatSelectModule,
     MatDialogModule

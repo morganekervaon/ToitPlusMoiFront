@@ -1,10 +1,55 @@
 <div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
     <div class="card p-5 z-dep-2">
-        <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
+
+        <form #adresse="ngForm" (ngSubmit)="createAdresse(adresse.value)">
             <h3 class="text-info" style="text-align: center;">Hello {{userConnect.prenom}}, tu peux enregistrer un
                 appartement ici</h3>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <h4 class="text-info" style="text-align: center;">Adresse</h4>
+                <div class="md-form">
+                    <label for="">Numéro</label>
+                    <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="numero" ngModel=""
+                        class="form-control">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="md-form">
+                    <label for="">Rue</label>
+                    <input type="text" name="voie" ngModel="" class="form-control">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="md-form">
+                    <label for="">Code Postal</label>
+                    <input type="number" min="10000" min="99999" oninput="this.value = Math.round(this.value);"
+                        name="codePostal" ngModel class="form-control">
+
+                </div><br>
+                <hr>
+                <br>
+                <div class="md-form">
+                    <label for="">Ville</label>
+                    <input type="text" name="ville" ngModel class="form-control">
+
+                </div>
 
 
+            </div>
+        </form>
+
+
+
+        <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
+
+
+            <br>
+            <hr>
+            <br>
             <div>
                 <div>
                     <input type="radio" id="meuble" name="meuble" value="true">
@@ -21,7 +66,7 @@
             <div>
                 <mat-form-field>
                     <mat-label>Classe energétique</mat-label>
-                    <mat-select value="classNRJ">
+                    <mat-select value="classNRJ" name="classNRJ">
                         <mat-option>Inconnue</mat-option>
                         <mat-option value="A">A</mat-option>
                         <mat-option value="B">B</mat-option>
@@ -71,6 +116,16 @@
             <br>
             <div>
                 <div class="md-form">
+                    <label for="">Nombre d'étages'</label>
+                    <input type="number" min="0" name="etage" oninput="this.value = Math.round(this.value);" ngModel=""
+                        class="form-control">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <div class="md-form">
                     <label for="">Nombre de chambres</label>
                     <input type="number" min="0" name="nbchambres" oninput="this.value = Math.round(this.value);"
                         ngModel="" class="form-control">
@@ -84,26 +139,18 @@
                     <label for="">Prix</label>
                     <input type="number" name="prix" min="0" ngModel="" class="form-control">
                 </div>
-            </div>
-            <br>
+            </div><br>
             <hr>
             <br>
             <div>
-                <mat-form-field>
-                    <mat-label>Exposition</mat-label>
-                    <mat-select value="exposition">
-                        <mat-option>Inconnue</mat-option>
-                        <mat-option value="Sud">Sud</mat-option>
-                        <mat-option value="Sud-Est">Sud-Est</mat-option>
-                        <mat-option value="Est">Est</mat-option>
-                        <mat-option value="Nord-Est">Nord-Est</mat-option>
-                        <mat-option value="Nord">Nord</mat-option>
-                        <mat-option value="Nord-Ouest">Nord-Ouest</mat-option>
-                        <mat-option value="Ouest">Ouest</mat-option>
-                    </mat-select>
-                </mat-form-field>
+
+                <div class="md-form">
+                    <label for="">Transports à proximité</label>
+                    <input type="text" name="transport" ngModel="" class="form-control">
+                </div>
 
             </div>
+
             <br>
             <hr>
             <br>
@@ -114,8 +161,8 @@
 
                     <div class="row">
                         <div class="col">
-                            <input type="checkbox" id="accessibilite" name="accessibilite" value="true" Ngmodel="">
-                            <label for="accessibilite"> Ascenseur</label>
+                            <input type="checkbox" id="ascenseur" name="ascenseur" value="true" Ngmodel="">
+                            <label for="ascenseur"> Ascenseur</label>
                         </div>
 
                         <div class="col">
@@ -167,7 +214,27 @@
             <br>
             <hr>
             <br>
-            <button class="btn btn-sm btn-block btn-sm">Enregistrer</button>
+            <div>
+                <mat-form-field>
+                    <mat-label>Exposition</mat-label>
+                    <mat-select value="exposition">
+                        <mat-option>Inconnue</mat-option>
+                        <mat-option value="Sud">Sud</mat-option>
+                        <mat-option value="Sud-Est">Sud-Est</mat-option>
+                        <mat-option value="Est">Est</mat-option>
+                        <mat-option value="Nord-Est">Nord-Est</mat-option>
+                        <mat-option value="Nord">Nord</mat-option>
+                        <mat-option value="Nord-Ouest">Nord-Ouest</mat-option>
+                        <mat-option value="Ouest">Ouest</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+
         </form>
+        <button class="btn btn-sm btn-block btn-sm">Enregistrer</button>
     </div>
 </div>

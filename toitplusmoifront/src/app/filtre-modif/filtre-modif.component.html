@@ -1,5 +1,5 @@
-<div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
-    <div class="card p-5 z-dep-2" *ngIf="critere">
+<div style="margin: auto; width: 80%; margin-top: 5%; margin-bottom: 5%;">
+    <div *ngIf="critere">
         <form #filtremodif="ngForm" (ngSubmit)="modifFiltre(filtremodif.value)">
             <h3 class="text-info">Hello {{userConnect.prenom}}, tu peux modifier tes filtres ici</h3>
             <p><i class="fa-solid fa-chair"></i>Meublé</p>

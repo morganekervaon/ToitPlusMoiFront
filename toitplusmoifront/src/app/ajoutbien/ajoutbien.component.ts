@@ -40,7 +40,7 @@ export class AjoutbienComponent implements OnInit {
     /*affiche le proprio dans la console */
     console.log(val);
 
-    this.http.post('http://localhost:8183/ajoutbien', val).subscribe({
+    this.http.post('http://localhost:8183/bien', val).subscribe({
       next: (data) => {
         console.log(data);
         this.route.navigateByUrl('home');

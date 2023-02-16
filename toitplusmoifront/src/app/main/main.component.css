@@ -12,6 +12,21 @@
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: Foundland;
+    src: url('../font/foundland.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Mademountain;
+    src: url('../font/mademountain.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .MainLocBody {
     background-color: rgb(255, 255, 255, 0.6) !important;
     background-image: url('../images/2205_w037_n003_358b_p1_358.jpg') !important;
@@ -105,4 +120,18 @@
         0 0 0 -3px var(--background), 0 0 0 0 var(--yellow),
         0 0 0 -3px var(--background), 0 0 0 0 var(--orange),
         0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+}
+
+.card-body {
+    font-family: Mademountain;
+    margin-top: 5%;
+}
+
+.card-title {
+    font-family: Mademountain !important;
+    font-size: 2.1vw;
+}
+
+.cardStyleG .card-body {
+    text-align: right;
 }

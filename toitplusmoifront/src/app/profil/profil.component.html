@@ -30,7 +30,7 @@
           <h5 class="card-title">Liste des matchs</h5>
           <h6 class="card-subtitle mb-2 text-muted">Retrouvez ici tous vos matchs et leur statut</h6>
           <p class="card-text">Retrouvez l'historique de tous vos matchs ainsi que ceux que vous n'avez pas accepté.</p>
-          <a href="#" class="card-link">Matchs</a>
+          <a *ngIf="!matchs" (click)="openModalMatchs()" class="card-link">Matchs</a>
           <a href="#" class="card-link">Historique</a>
 
         </div>

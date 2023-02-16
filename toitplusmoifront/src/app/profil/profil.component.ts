@@ -14,6 +14,7 @@ import { MatchsComponent } from '../matchs/matchs.component';
 })
 export class ProfilComponent implements OnInit {
   critere: any;
+  matchs: any;
   constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialog: MatDialog) { }
   public userConnect = this.authService.getUserConnect();
   ngOnInit(): void {

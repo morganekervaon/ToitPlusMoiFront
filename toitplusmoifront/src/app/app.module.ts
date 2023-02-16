@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MainProprioComponent } from './main-proprio/main-proprio.component';
+import { RechercheLocataireComponent } from './recherche-locataire/recherche-locataire.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MainProprioComponent } from './main-proprio/main-proprio.component';
     FiltreModifComponent,
     RechercheAppartComponent,
     RechercheMaisonComponent,
-    MainProprioComponent
+    MainProprioComponent,
+    RechercheLocataireComponent
   ],
   imports: [
     BrowserModule,

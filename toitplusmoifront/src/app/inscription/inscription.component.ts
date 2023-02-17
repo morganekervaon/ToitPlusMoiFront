@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -9,8 +10,11 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
+
   status: any;
-  constructor(private http: HttpClient, private route: Router, private authService: AuthService) { }
+
+  constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialogRefSignin: MatDialogRef<InscriptionComponent>,) { }
+
   ngOnInit(): void {
     if (this.authService.isConnected()) {
       this.route.navigateByUrl('main');
@@ -30,6 +34,10 @@ export class InscriptionComponent implements OnInit {
       },
       error: (err) => { console.log(err); }
     });
+  }
+
+  onNoClick(): void {
+    this.dialogRefSignin.close();
   }
 
 }

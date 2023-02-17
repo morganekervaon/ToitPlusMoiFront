@@ -10,16 +10,17 @@
             </div>
         </div>
     </div>
-    <div class="container" *ngIf="appart!=null">
+
+    <div class="container-fluid" *ngIf="appart!=null">
         <div class="row">
             <div class="col"></div>
-            <div class="col-6">
-                <div class="card" style="width: 30rem;">
+            <div class="col">
+                <div class="card" style="width: auto;">
                     <img src="../../assets/images/appart.jpeg" class="card-img-top" alt="photo appart">
-                    <div class="card-body center">
-                        <h5 class="card-title">Appartement de {{appart.proprio.prenom}}</h5>
-                        <p>{{appart.prix}} €</p>
-                        <p>{{appart.type}} : {{appart.surface}} m²</p>
+                    <div class="card-header center">
+                        <h3 class="card-title text-center"><b>Appartement de {{appart.proprio.prenom}}</b></h3>
+                        <h4>{{appart.prix}} €</h4>
+                        <h4>{{appart.type}} : {{appart.surface}} m²</h4>
                         <p class="card-text">Adresse : {{appart.adresse.numero}} {{appart.adresse.voie}},
                             {{appart.adresse.codePostal}}
                             {{appart.adresse.ville}}</p>
@@ -29,28 +30,41 @@
                         <p>Classe énergétique : {{appart.classeNRJ}}</p>
                         <p>Disponible le : {{appart.dispo}}</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item" *ngIf="appart.accessibilite">Handicap Friendly</li>
-                        <li class="list-group-item" *ngIf="appart.cave">Cave</li>
-                        <li class="list-group-item" *ngIf="appart.ascenseur"> Etage {{appart.etage}}, avec ascenseur
-                        </li>
-                        <li class="list-group-item" *ngIf="!appart.ascenseur">Etage {{appart.etage}}, sans ascenseur
-                        </li>
-                        <li class="list-group-item" *ngIf="appart.balcon">Balcon</li>
-                        <li class="list-group-item" *ngIf="appart.jardin">Jardin</li>
-                        <li class="list-group-item" *ngIf="appart.laveVaisselle">Lave-Vaisselle</li>
-                        <li class="list-group-item" *ngIf="appart.machineALaver">Machine à laver</li>
-                        <li class="list-group-item" *ngIf="appart.salleEau"><i class="fas fa-bath"></i> Salle d'eau</li>
-                        <li class="list-group-item" *ngIf="appart.exposition"><i class="fas fa-sun"></i> Exposition
-                            {{appart.exposition}}</li>
-                        <li class="list-group-item" *ngIf="appart.transport"><i class="fas fa-train"></i>
-                            {{appart.transport}}
-                        </li>
-                    </ul>
                     <div class="card-body">
-                        <a (click)="haterAnnonce()" class="card-link">Passer<i class="fas fa-ban"></i></a>
-                        <a (click)="likerAnnonce()" class="card-link">Liker<i class="fas fa-heart"></i></a>
+                        <ul class="list-group ">
+                            <li class="list-group-item" *ngIf="appart.accessibilite"><i
+                                    class="fab fa-accessible-icon"></i> Handicap Friendly
+                            </li>
+                            <li class="list-group-item" *ngIf="appart.cave">Cave</li>
+                            <li class="list-group-item" *ngIf="appart.ascenseur">Avec ascenseur
+                            </li>
+                            <li class="list-group-item" *ngIf="!appart.ascenseur">Sans ascenseur
+                            </li>
+                            <li class="list-group-item" *ngIf="appart.balcon">Balcon</li>
+                            <li class="list-group-item" *ngIf="appart.jardin">Jardin</li>
+                            <li class="list-group-item" *ngIf="appart.laveVaisselle">Lave-Vaisselle</li>
+                            <li class="list-group-item" *ngIf="appart.machineALaver">Machine à laver</li>
+                            <li class="list-group-item" *ngIf="appart.salleEau"><i class="fas fa-bath"></i> Salle d'eau
+                            </li>
+                            <li class="list-group-item" *ngIf="appart.exposition"><i class="fas fa-sun"></i> Exposition
+                                {{appart.exposition}}</li>
+                            <li class="list-group-item" *ngIf="appart.transport"><i class="fas fa-train"></i>
+                                {{appart.transport}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row float-left">
+                            <div class="col-6 pr-0 pl-5">
+                                <a (click)="haterAnnonce()" class="card-link" style="color: black;"><b>X</b></a>
+                            </div>
+                        </div>
+                        <div class="row float-right">
+                            <div class="col-6 pr-5 pl-0">
+                                <a (click)="likerAnnonce()" class="card-link" style="color: red;"><i
+                                        class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
                         <!--<a (click)="" class="card-link">SuperLiker</a>-->
                     </div>
                 </div>

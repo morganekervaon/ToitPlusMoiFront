@@ -1,0 +1,44 @@
+@font-face {
+    font-family: HyperBlobOutline;
+    src: url('../app/font/hyperblob-outline.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: HyperBlob;
+    src: url('../app/font/hyperblob.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Foundland;
+    src: url('../app/font/foundland.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Mademountain;
+    src: url('../app/font/mademountain.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.footerToit {
+    font-family: Mademountain;
+
+}
+
+.footerToit h5 {
+    font-family: Mademountain !important;
+}
+
+.navBarApp li a {
+    font-family: Mademountain !important;
+    font-size: 1.3vw;
+    color: #00A97F;
+}

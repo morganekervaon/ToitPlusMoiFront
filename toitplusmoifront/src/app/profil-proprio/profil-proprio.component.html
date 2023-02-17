@@ -6,14 +6,13 @@
             </div>
             <div class="row ml-5 p-4">
                 <div class="col-sm ">
-                    <div class="card cardLoc" style="width: 22rem;">
+                    <div class="card cardLoc" style="width: 25rem;">
                         <div class="card-body mt-3">
-                            <h5 class="card-title">Dossier locataire</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Créez votre dossier locataire</h6>
-                            <p class="card-text">Votre dossier locataire permet de vous présenter aux
-                                propriétaires. Un dossier
-                                correctement rempli augmentera les chances de match sur le logement de vos rêves
-                                !</p>
+                            <h5 class="card-title">Ajout de biens</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ajoutez vos appart, maison, cabanes, tout se loue
+                                sur Paris !</h6>
+                            <p class="card-text">En ajoutant un bien, vous permettez aux locataires candidats de trouver
+                                leur nid douillet.</p>
                             <div class="linkLoc">
                                 <a (click)="openModalAjBien()" class="card-link">Ajouter un appartement</a>
                                 <a (click)="openModalAjMaison()" class="card-link">Ajouter une maison</a>
@@ -28,9 +27,7 @@
                             <h5 class="card-title">Liste des matchs</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Retrouvez ici tous vos matchs et leur statut
                             </h6>
-                            <p class="card-text">Retrouvez l'historique de tous vos matchs ainsi que ceux que vous
-                                n'avez pas
-                                accepté.
+                            <p class="card-text">Retrouvez l'historique de tous vos matchs.
                             </p>
                             <div class="linkLoc">
                                 <a *ngIf="!matchs" (click)="openModalMatchs()" class="card-link">Matchs</a>
@@ -49,14 +46,13 @@
                 <div class="cardBien">
                     <div class="card cardLoc" style="width: 22rem;">
                         <div class="card-body mt-3">
-                            <h5 class="card-title">Dossier locataire</h5>
+                            <h5 class="card-title">Mes biens</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Créez votre dossier locataire</h6>
-                            <p class="card-text">Votre dossier locataire permet de vous présenter aux
-                                propriétaires. Un dossier
-                                correctement rempli augmentera les chances de match sur le logement de vos rêves
-                                !</p>
+                            <p class="card-text">Faites un petit tour d'horizon de l'ensemble de vos biens possibles à
+                                la location sur notre site.
+                                Vous pouurez également préciser s'ils sont encore disponibles.</p>
                             <div class="linkLoc">
-                                <a href="#" class="card-link">Mes biens</a>
+                                <a href="#" class="card-link">Les voir</a>
                             </div>
 
                         </div>

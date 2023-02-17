@@ -1,228 +1,226 @@
-<div style="margin: auto; width: 70%; margin-top: 100px; margin-bottom: 100px;">
-    <div class="card p-5 z-dep-2">
-
-
-
-
-        <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
-            <h3 class="text-info" style="text-align: center;">Hello {{userConnect.prenom}}, tu peux enregistrer un
-                appartement ici</h3>
-            <br>
-            <hr>
-            <br>
-            <div>
-                <h4 class="text-info" style="text-align: center;">Adresse</h4>
-                <div class="md-form">
-                    <label for="numero">Numéro</label>
-                    <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="numero" ngModel=""
-                        class="form-control">
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div class="md-form">
-                    <label for="rue">Rue</label>
-                    <input type="text" name="voie" ngModel="" class="form-control">
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div class="md-form">
-                    <label for="codePostal">Code Postal</label>
-                    <input type="number" min="10000" min="99999" oninput="this.value = Math.round(this.value);"
-                        name="codePostal" ngModel="" class="form-control">
-
-                </div><br>
-                <hr>
-                <br>
-                <div class="md-form">
-                    <label for="ville">Ville</label>
-                    <input type="text" name="ville" ngModel="" class="form-control">
-
-                </div>
-
-
-            </div>
-
-            <br>
-            <hr>
-            <br>
-            <div>
-                <div>
-                    <input type="radio" id="meuble" name="meuble" ngModel="" value="true">
-                    <label for="meuble">Meublé</label>
-                </div>
-                <div>
-                    <input type="radio" id="nonMeuble" name="meuble" value="false" ngModel="">
-                    <label for="nomMeuble">Non meublé</label>
-                </div>
+<div style="margin: auto; width: 80%; margin-top: 5%; margin-bottom: 5%;">
+    <form #appartement="ngForm" (ngSubmit)="createAppart(appartement.value)">
+        <h3 class="text-info" style="text-align: center;">Hello {{userConnect.prenom}}, tu peux enregistrer un
+            appartement ici</h3>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <h4 class="text-info" style="text-align: center;">Adresse</h4>
+            <div class="md-form">
+                <label for="numero">Numéro</label>
+                <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="numero" ngModel=""
+                    class="form-control">
             </div>
             <br>
             <hr>
             <br>
-            <div>
-                <mat-form-field>
-                    <mat-label>Classe energétique</mat-label>
-                    <mat-select value="classeNRJ" name="classeNRJ" ngModel="">
-                        <mat-option>Inconnue</mat-option>
-                        <mat-option value="A">A</mat-option>
-                        <mat-option value="B">B</mat-option>
-                        <mat-option value="C">C</mat-option>
-                        <mat-option value="D">D</mat-option>
-                        <mat-option value="E">E</mat-option>
-                        <mat-option value="F">F</mat-option>
-                        <mat-option value="G">G</mat-option>
-                    </mat-select>
-                </mat-form-field>
+            <div class="md-form">
+                <label for="rue">Rue</label>
+                <input type="text" name="voie" ngModel="" class="form-control">
             </div>
             <br>
             <hr>
             <br>
-            <div>
+            <div class="md-form">
+                <label for="codePostal">Code Postal</label>
+                <input type="number" min="10000" min="99999" oninput="this.value = Math.round(this.value);"
+                    name="codePostal" ngModel="" class="form-control">
 
-                <div class="md-form">
-                    <label for="">Surface en m²</label>
-                    <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="surface"
-                        ngModel="" class="form-control">
-                </div>
-
-            </div>
-
-            <br>
-            <hr>
-            <br>
-            <div>
-
-                <div class="md-form">
-                    <label for="dispo">Date de disponibilité</label>
-                    <input type="date" name="dispo" ngModel="" class="form-control">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div>
-                <div class="md-form">
-                    <label for="">Nombre de pièces</label>
-                    <input type="number" min="0" name="nbpieces" oninput="this.value = Math.round(this.value);"
-                        ngModel="" class="form-control">
-                </div>
-            </div>
-
-            <br>
-            <hr>
-            <br>
-            <div>
-                <div class="md-form">
-                    <label for="">Nombre de chambres</label>
-                    <input type="number" min="0" name="nbchambres" oninput="this.value = Math.round(this.value);"
-                        ngModel="" class="form-control">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div>
-                <div class="md-form">
-                    <label for="">Prix</label>
-                    <input type="number" name="prix" min="0" ngModel="" class="form-control">
-                </div>
             </div><br>
             <hr>
             <br>
-            <div>
+            <div class="md-form">
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" ngModel="" class="form-control">
 
-                <div class="md-form">
-                    <label for="">Transports à proximité</label>
-                    <input type="text" name="transport" ngModel="" class="form-control">
+            </div>
+
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div>
+            <div>
+                <input type="radio" id="meuble" name="meuble" ngModel="" value="true">
+                <label for="meuble">Meublé</label>
+            </div>
+            <div>
+                <input type="radio" id="nonMeuble" name="meuble" value="false" ngModel="">
+                <label for="nomMeuble">Non meublé</label>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <mat-form-field>
+                <mat-label class="labelAj">Classe energétique</mat-label>
+                <mat-select value="classeNRJ" name="classeNRJ" ngModel="">
+                    <mat-option class="labelAj">Inconnue</mat-option>
+                    <mat-option class="labelAj" value="A">A</mat-option>
+                    <mat-option class="labelAj" value="B">B</mat-option>
+                    <mat-option class="labelAj" value="C">C</mat-option>
+                    <mat-option class="labelAj" value="D">D</mat-option>
+                    <mat-option class="labelAj" value="E">E</mat-option>
+                    <mat-option class="labelAj" value="F">F</mat-option>
+                    <mat-option class="labelAj" value="G">G</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+
+            <div class="md-form">
+                <label for="">Surface en m²</label>
+                <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="surface" ngModel=""
+                    class="form-control">
+            </div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div>
+
+            <div class="md-form">
+                <label for="dispo">Date de disponibilité</label>
+                <input type="date" name="dispo" ngModel="" class="form-control">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <div class="md-form">
+                <label for="">Nombre de pièces</label>
+                <input type="number" min="0" name="nbpieces" oninput="this.value = Math.round(this.value);" ngModel=""
+                    class="form-control">
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        <div>
+            <div class="md-form">
+                <label for="">Nombre de chambres</label>
+                <input type="number" min="0" name="nbchambres" oninput="this.value = Math.round(this.value);" ngModel=""
+                    class="form-control">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <div class="md-form">
+                <label for="">Prix</label>
+                <input type="number" name="prix" min="0" ngModel="" class="form-control">
+            </div>
+        </div><br>
+        <hr>
+        <br>
+        <div>
+
+            <div class="md-form">
+                <label for="">Transports à proximité</label>
+                <input type="text" name="transport" ngModel="" class="form-control">
+            </div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            <p>En plus</p>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" id="ascenseur" name="ascenseur" value="true" Ngmodel="">
+                        <label for="ascenseur"> Ascenseur</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="checkbox" id="machineALaver" name="machineALaver" value="true" ngModel="">
+                        <label for="machineALaver"> Machine à laver</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="checkbox" id="laveVaisselle" name="laveVaisselle" value="true" ngModel="">
+                        <label for="laveVaisselle"> Lave vaisselle</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" id="jardin" name="jardin" value="true" ngModel="">
+                        <label for="jardin"> Jardin</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="checkbox" id="parking" name="parking" value="true" ngModel="">
+                        <label for="parking"> Parking</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="checkbox" id="cave" name="cave" value="true" ngModel="">
+                        <label for="cave"> Cave</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-4">
+                        <input type="checkbox" id="balcon" name="balcon" value="true" ngModel="">
+                        <label for="balcon"> Balcon</label>
+                    </div>
+
+                    <div class="col col-4">
+                        <input type="checkbox" id="salleEau" name="salleEau" value="true" ngModel="">
+                        <label for="salleEau"> Salle d'eau</label>
+                    </div>
+                    <div class="col col-4">
+                        <input type="checkbox" id="accessibilite" name="accessibilite" value="true" ngModel="">
+                        <label for="accessibilite"> Accessibilite</label>
+                    </div>
                 </div>
 
             </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <mat-form-field>
+                <mat-label class="labelAj">Exposition</mat-label>
+                <mat-select value="exposition" ngModel="" name="exposition">
+                    <mat-option class="labelAj">Inconnue</mat-option>
+                    <mat-option class="labelAj" value="Sud">Sud</mat-option>
+                    <mat-option class="labelAj" value="Sud-Est">Sud-Est</mat-option>
+                    <mat-option class="labelAj" value="Est">Est</mat-option>
+                    <mat-option class="labelAj" value="Nord-Est">Nord-Est</mat-option>
+                    <mat-option class="labelAj" value="Nord">Nord</mat-option>
+                    <mat-option class="labelAj" value="Nord-Ouest">Nord-Ouest</mat-option>
+                    <mat-option class="labelAj" value="Ouest">Ouest</mat-option>
+                </mat-select>
+            </mat-form-field>
 
-            <br>
-            <hr>
-            <br>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="btnSigninDiv">
+            <button (click)="onNoClick()" class="btn btn-sm btnSignin btn-sm">Enregistrer</button>
+        </div>
 
-            <div>
-                <p>En plus</p>
-                <div class="container">
+    </form>
 
-                    <div class="row">
-                        <div class="col">
-                            <input type="checkbox" id="ascenseur" name="ascenseur" value="true" Ngmodel="">
-                            <label for="ascenseur"> Ascenseur</label>
-                        </div>
 
-                        <div class="col">
-                            <input type="checkbox" id="machineALaver" name="machineALaver" value="true" ngModel="">
-                            <label for="machineALaver"> Machine à laver</label>
-                        </div>
-
-                        <div class="col">
-                            <input type="checkbox" id="laveVaisselle" name="laveVaisselle" value="true" ngModel="">
-                            <label for="laveVaisselle"> Lave vaisselle</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <input type="checkbox" id="jardin" name="jardin" value="true" ngModel="">
-                            <label for="jardin"> Jardin</label>
-                        </div>
-
-                        <div class="col">
-                            <input type="checkbox" id="parking" name="parking" value="true" ngModel="">
-                            <label for="parking"> Parking</label>
-                        </div>
-
-                        <div class="col">
-                            <input type="checkbox" id="cave" name="cave" value="true" ngModel="">
-                            <label for="cave"> Cave</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col col-4">
-                            <input type="checkbox" id="balcon" name="balcon" value="true" ngModel="">
-                            <label for="balcon"> Balcon</label>
-                        </div>
-
-                        <div class="col col-4">
-                            <input type="checkbox" id="salleEau" name="salleEau" value="true" ngModel="">
-                            <label for="salleEau"> Salle d'eau</label>
-                        </div>
-                        <div class="col col-4">
-                            <input type="checkbox" id="accessibilite" name="accessibilite" value="true" ngModel="">
-                            <label for="accessibilite"> Accessibilite</label>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div>
-                <mat-form-field>
-                    <mat-label>Exposition</mat-label>
-                    <mat-select value="exposition" ngModel="" name="exposition">
-                        <mat-option>Inconnue</mat-option>
-                        <mat-option value="Sud">Sud</mat-option>
-                        <mat-option value="Sud-Est">Sud-Est</mat-option>
-                        <mat-option value="Est">Est</mat-option>
-                        <mat-option value="Nord-Est">Nord-Est</mat-option>
-                        <mat-option value="Nord">Nord</mat-option>
-                        <mat-option value="Nord-Ouest">Nord-Ouest</mat-option>
-                        <mat-option value="Ouest">Ouest</mat-option>
-                    </mat-select>
-                </mat-form-field>
-
-            </div>
-            <br>
-            <hr>
-            <br>
-            <button (click)="onNoClick()" class="btn btn-sm btn-block btn-sm">Enregistrer</button>
-        </form>
-
-    </div>
 </div>

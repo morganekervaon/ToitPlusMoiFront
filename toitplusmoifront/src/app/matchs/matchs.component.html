@@ -1,1 +1,15 @@
-<p>matchs works!</p>
+<div class="container">
+    <h1 style="text-align: center;">Vos Matchs</h1>
+    <div class="row" ng>
+        <div class="col-sm-3" *ngFor="let m of matchs">
+            <div class="card p-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{m.adresse.numero}}</h5>
+                    <h5 class="card-title">{{m.adresse.voie}}</h5>
+                    <h5 class="card-title">{{m.adresse.codePostal}}</h5>
+                    <h5 class="card-title">{{m.adresse.ville}}</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>

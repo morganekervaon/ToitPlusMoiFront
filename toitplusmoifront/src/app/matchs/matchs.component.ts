@@ -34,8 +34,8 @@ export class MatchsComponent {
       error: (err) => { console.log(err); }
     })
   };
-  onNoClick(): void {
-    this.dialogRefModif.close();
+  onNoClick(): void {/*
+    this.dialogRefModif.close();*/
 
   }
 }

@@ -11,7 +11,7 @@
             <hr>
             <br>
             <div>
-                <h4 class="text-info" style="text-align: center;">Adresse</h4>
+                <h4 class="text-info" style="text-align: center; font-family: Mademoutain;">Adresse</h4>
                 <div class="md-form">
                     <label for="numero">Numéro</label>
                     <input type="number" min="0" oninput="this.value = Math.round(this.value);" name="numero" ngModel=""
@@ -62,16 +62,16 @@
             <br>
             <div>
                 <mat-form-field>
-                    <mat-label>Classe energétique</mat-label>
+                    <mat-label class="labelAJ">Classe energétique</mat-label>
                     <mat-select value="classeNRJ" name="classeNRJ" ngModel="">
-                        <mat-option>Inconnue</mat-option>
-                        <mat-option value="A">A</mat-option>
-                        <mat-option value="B">B</mat-option>
-                        <mat-option value="C">C</mat-option>
-                        <mat-option value="D">D</mat-option>
-                        <mat-option value="E">E</mat-option>
-                        <mat-option value="F">F</mat-option>
-                        <mat-option value="G">G</mat-option>
+                        <mat-option class="labelAJ">Inconnue</mat-option>
+                        <mat-option class="labelAJ" value="A">A</mat-option>
+                        <mat-option class="labelAJ" value="B">B</mat-option>
+                        <mat-option class="labelAJ" value="C">C</mat-option>
+                        <mat-option class="labelAJ" value="D">D</mat-option>
+                        <mat-option class="labelAJ" value="E">E</mat-option>
+                        <mat-option class="labelAJ" value="F">F</mat-option>
+                        <mat-option class="labelAJ" value="G">G</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
@@ -211,16 +211,16 @@
             <br>
             <div>
                 <mat-form-field>
-                    <mat-label>Exposition</mat-label>
+                    <mat-label class="labelAJ">Exposition</mat-label>
                     <mat-select value="exposition" ngModel="" name="exposition">
-                        <mat-option>Inconnue</mat-option>
-                        <mat-option value="Sud">Sud</mat-option>
-                        <mat-option value="Sud-Est">Sud-Est</mat-option>
-                        <mat-option value="Est">Est</mat-option>
-                        <mat-option value="Nord-Est">Nord-Est</mat-option>
-                        <mat-option value="Nord">Nord</mat-option>
-                        <mat-option value="Nord-Ouest">Nord-Ouest</mat-option>
-                        <mat-option value="Ouest">Ouest</mat-option>
+                        <mat-option class="labelAJ">Inconnue</mat-option>
+                        <mat-option class="labelAJ" value="Sud">Sud</mat-option>
+                        <mat-option class="labelAJ" value="Sud-Est">Sud-Est</mat-option>
+                        <mat-option class="labelAJ" value="Est">Est</mat-option>
+                        <mat-option class="labelAJ" value="Nord-Est">Nord-Est</mat-option>
+                        <mat-option class="labelAJ" value="Nord">Nord</mat-option>
+                        <mat-option class="labelAJ" value="Nord-Ouest">Nord-Ouest</mat-option>
+                        <mat-option class="labelAJ" value="Ouest">Ouest</mat-option>
                     </mat-select>
                 </mat-form-field>
 

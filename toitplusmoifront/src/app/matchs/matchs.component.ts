@@ -5,10 +5,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 
-
-
-
-
 @Component({
   selector: 'app-matchs',
   templateUrl: './matchs.component.html',
@@ -18,7 +14,7 @@ export class MatchsComponent {
 
 
   matchs: any;
-  constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialog: MatDialog) { }
+  constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialogRef: MatDialogRef<MatchsComponent>) { }
   public userConnect = this.authService.getUserConnect();
   ngOnInit(): void {
     if (this.userConnect.proprio) {
@@ -34,8 +30,9 @@ export class MatchsComponent {
       error: (err) => { console.log(err); }
     })
   };
-  onNoClick(): void {/*
-    this.dialogRefModif.close();*/
+
+  onNoClick(): void {
+    this.dialogRef.close();
 
   }
 }

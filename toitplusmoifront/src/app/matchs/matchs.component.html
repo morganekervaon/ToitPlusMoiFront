@@ -1,17 +1,27 @@
 <div class="container">
-    <h1 style="text-align: center;">Vos Matchs</h1>
+    <h1 style="text-align: center">Vos Matchs</h1>
     <div class="row" ng>
-        <div class="col-sm-3" *ngFor="let m of matchs">
+        <div class="col-6" *ngFor="let m of matchs">
             <div class="card p-2">
-                <div class="card-body">
-                    <h5 class="card-title">{{m.appart.adresse.numero}}</h5>
-                    <h5 class="card-title">{{m.appart.adresse.voie}}</h5>
-                    <h5 class="card-title">{{m.appart.adresse.codePostal}}</h5>
-                    <h5 class="card-title">{{m.appart.adresse.ville}}</h5>
+                <div class="card" style=" width: auto;">
+                    <img src="../../assets/images/harry-potter-poudlard-sorciers-angleterre.jpg" class="card-img-top"
+                        alt="photo cabane">
+                    <div class="card-header center">
+                        <h3 class="card-title text-center"><b>Adresse</b></h3>
+                        <h5 class="card-title">{{m.appart.adresse.numero}} {{m.appart.adresse.voie}}</h5>
+                        <h5 class="card-title">{{m.appart.adresse.codePostal}} {{m.appart.adresse.ville}}</h5>
+                    </div>
+                    <div class="card-body center">
+                        <h3 class="card-title text-center"><b>Propriétaire </b></h3>
+                        <h5 class="card-title">{{m.appart.proprio.prenom}}
+                            {{m.appart.proprio.nom}}</h5>
+                        <h5 class="card-title"> {{m.appart.proprio.mail}}</h5>
+
+                    </div>
+
                 </div>
             </div>
+            <div class="btnSigninDiv">
+                <button (click)="onNoClick()" class="btn btn-sm ">Quitter</button>
+            </div>
         </div>
-        <div>
-            <button (click)="onNoClick()" class="btn">Quitter</button>
-        </div>
-    </div>

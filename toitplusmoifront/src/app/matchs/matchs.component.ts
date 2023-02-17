@@ -17,15 +17,12 @@ export class MatchsComponent {
   constructor(private http: HttpClient, private route: Router, private authService: AuthService, public dialogRef: MatDialogRef<MatchsComponent>) { }
   public userConnect = this.authService.getUserConnect();
   ngOnInit(): void {
-    if (this.userConnect.proprio) {
-      this.route.navigateByUrl('profilProprio');
-    } else {
-      this.route.navigateByUrl('profil');
-    }
+
 
     this.http.get('http://localhost:8183/allMatchsAppart/' + this.userConnect.id).subscribe({
       next: (data) => {
         this.matchs = data;
+        console.log(this.matchs)
       },
       error: (err) => { console.log(err); }
     })

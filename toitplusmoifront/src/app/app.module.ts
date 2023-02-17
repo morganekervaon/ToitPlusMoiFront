@@ -31,6 +31,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ProfilProprioComponent } from './profil-proprio/profil-proprio.component';
 import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 import { MatchsComponent } from './matchs/matchs.component';
+import { MatchProprioComponent } from './match-proprio/match-proprio.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MatchsComponent } from './matchs/matchs.component';
     ProfilProprioComponent,
     AjoutmaisonComponent,
     MatchsComponent,
+    MatchProprioComponent,
   ],
   imports: [
     BrowserModule,

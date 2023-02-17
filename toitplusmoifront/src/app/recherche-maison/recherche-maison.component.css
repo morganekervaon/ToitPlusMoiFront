@@ -34,10 +34,47 @@
     background-attachment: local !important;
     background-size: cover !important;
     background-position: center !important;
+    height: 100vh;
     /*font-family: HyperBlob !important;*/
 }
 
 .BGBody {
     background-color: rgb(255, 196, 140, 0.5) !important;
     width: 100% !important;
+    height: 100vh;
+}
+
+.parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.child1 {
+    position: absolute;
+    width: 100 px;
+    height: 150px;
+    top: 250px;
+    left: 100px;
+    /*opacity: 0.7;
+    background: red;*/
+}
+
+.child2 {
+    z-index: 1;
+    top: 0;
+    margin-left: 100px;
+    height: 100vh;
+    width: 690px;
+    /*background: green;*/
+}
+
+.child3 {
+    z-index: 1;
+    margin-left: 870px;
+    width: 200px;
+    top: 250px;
+    height: 150px;
+    /*background: rgb(255, 255, 255);*/
 }

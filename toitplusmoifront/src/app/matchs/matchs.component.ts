@@ -4,7 +4,6 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
-
 @Component({
   selector: 'app-matchs',
   templateUrl: './matchs.component.html',

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AjoutbienComponent } from '../ajoutbien/ajoutbien.component';
 import { AjoutmaisonComponent } from '../ajoutmaison/ajoutmaison.component';
 import { AuthService } from '../auth.service';
+import { MatchProprioComponent } from '../match-proprio/match-proprio.component';
 import { MatchsComponent } from '../matchs/matchs.component';
 
 @Component({
@@ -39,7 +40,7 @@ export class ProfilProprioComponent implements OnInit {
   }
 
   openModalMatchs() {
-    const dialogRef = this.dialog.open(MatchsComponent, {
+    const dialogRef = this.dialog.open(MatchProprioComponent, {
       height: '600px',
       width: '800px',
     });

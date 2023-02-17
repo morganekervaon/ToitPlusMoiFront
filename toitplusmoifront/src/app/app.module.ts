@@ -32,6 +32,7 @@ import { ProfilProprioComponent } from './profil-proprio/profil-proprio.componen
 import { AjoutmaisonComponent } from './ajoutmaison/ajoutmaison.component';
 import { MatchsComponent } from './matchs/matchs.component';
 import { MatchProprioComponent } from './match-proprio/match-proprio.component';
+import { EnsembleBienComponent } from './ensemble-bien/ensemble-bien.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MatchProprioComponent } from './match-proprio/match-proprio.component';
     AjoutmaisonComponent,
     MatchsComponent,
     MatchProprioComponent,
+    EnsembleBienComponent,
   ],
   imports: [
     BrowserModule,

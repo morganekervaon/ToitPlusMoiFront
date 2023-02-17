@@ -22,6 +22,7 @@ import { MatchsComponent } from './matchs/matchs.component';
 import { AuthguarproprioService } from './authguarproprio.service';
 import { AuthgardlocaService } from './authgardloca.service';
 import { MatchProprioComponent } from './match-proprio/match-proprio.component';
+import { EnsembleBienComponent } from './ensemble-bien/ensemble-bien.component';
 
 const routes: Routes = [
   { path: 'ajoutmaison', canActivate: [AuthguarproprioService], component: AjoutmaisonComponent },
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'profilProprio', canActivate: [AuthguarproprioService], component: ProfilProprioComponent },
   { path: 'matchs', canActivate: [AuthgardlocaService], component: MatchsComponent },
   { path: 'matchsProprio', canActivate: [AuthguarproprioService], component: MatchProprioComponent },
+  { path: 'ensembleBien', canActivate: [AuthguarproprioService], component: EnsembleBienComponent }
 ];
 
 

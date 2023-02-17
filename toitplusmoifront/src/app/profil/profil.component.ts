@@ -35,14 +35,14 @@ export class ProfilComponent implements OnInit {
   openModalFiltre() {
     const dialogRef = this.dialog.open(FiltreComponent, {
       height: '600px',
-      width: '800px',
+      width: '900px',
     });
   }
 
   openModalFiltreModif() {
     const dialogRefModif = this.dialog.open(FiltreModifComponent, {
       height: '600px',
-      width: '800px',
+      width: '900px',
     });
   }
   openModalMatchs() {

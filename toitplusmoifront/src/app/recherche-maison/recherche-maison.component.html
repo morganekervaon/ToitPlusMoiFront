@@ -1,70 +1,74 @@
-<div class="d-flex justify-content-center m-5">
-    <div class="container" *ngIf="maison==null">
-        <div class="row justify-content-center align-items-center g-2">
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <strong>Il n'y a plus de maisons qui pourraient te convenir :(</strong>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid" *ngIf="maison!=null">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <div class="card" style=" width: auto;">
-                    <img src="../../assets/images/cabane.jpg" class="card-img-top" alt="photo cabane">
-                    <div class="card-header center">
-                        <h3 class="card-title text-center"><b>Maison de {{maison.proprio.prenom}}</b></h3>
-                        <h4>{{maison.prix}} €</h4>
-                        <h4>{{maison.surface}} m²</h4>
-                        <p class="card-text">Adresse : {{maison.adresse.numero}} {{maison.adresse.voie}},
-                            {{maison.adresse.codePostal}}
-                            {{maison.adresse.ville}}</p>
-                        <p *ngIf="maison.meuble">Meublé</p>
-                        <p *ngIf="!maison.meuble">Non meublé</p>
-                        <p>Nombre de chambres : {{maison.nbchambres}}</p>
-                        <p>Classe énergétique : {{maison.classeNRJ}}</p>
-                        <p>Disponible le : {{maison.date}}</p>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group ">
-                            <li class="list-group-item" *ngIf="maison.accessibilite"><i
-                                    class="fab fa-accessible-icon"></i> Handicap Friendly</li>
-                            <li class="list-group-item" *ngIf="maison.cave">Cave</li>
-                            <li class="list-group-item">{{maison.nbetages}} étage</li>
-                            <li class="list-group-item" *ngIf="maison.balcon">Balcon</li>
-                            <li class="list-group-item" *ngIf="maison.jardin">Jardin</li>
-                            <li class="list-group-item" *ngIf="maison.laveVaisselle">Lave-Vaisselle</li>
-                            <li class="list-group-item" *ngIf="maison.machineALaver">Machine à laver</li>
-                            <li class="list-group-item" *ngIf="maison.salleEau"><i class="fas fa-bath"></i> Salle d'eau
-                            </li>
-                            <li class="list-group-item" *ngIf="maison.exposition"><i class="fas fa-sun"></i> Exposition
-                                {{maison.exposition}}</li>
-                            <li class="list-group-item" *ngIf="maison.transport"><i class="fas fa-train"></i>
-                                {{maison.transport}}</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row float-left">
-                            <div class="col-6 pr-0 pl-5">
-                                <a (click)="haterAnnonce()" class="card-link" style="color: black;"><b>X</b></a>
-                            </div>
-                        </div>
-                        <div class="row float-right">
-                            <div class="col-6 pr-5 pl-0">
-                                <a (click)="likerAnnonce()" class="card-link" style="color: red;"><i
-                                        class="fas fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <!--<a (click)="" class="card-link">SuperLiker</a>-->
+<div class="MainLocBody">
+    <div class="BGBody">
+        <div class="d-flex justify-content-center m-5">
+            <div class="container" *ngIf="maison==null">
+                <div class="row justify-content-center align-items-center g-2">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <strong>Il n'y a plus de maisons qui pourraient te convenir :(</strong>
                     </div>
                 </div>
             </div>
-            <div class="col"></div>
+        
+            <div class="container-fluid" *ngIf="maison!=null">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <div class="card" style=" width: auto;">
+                            <img src="../../assets/images/cabane.jpg" class="card-img-top" alt="photo cabane">
+                            <div class="card-header center" style="font-family: Mademoutain;">
+                                <h3 class="card-title text-center" style="font-family: Mademoutain;"><b>Maison de {{maison.proprio.prenom}}</b></h3>
+                                <h4 style="font-family: Mademoutain;">{{maison.prix}} €</h4>
+                                <h4 style="font-family: Mademoutain;">{{maison.surface}} m²</h4>
+                                <p class="card-text">Adresse : {{maison.adresse.numero}} {{maison.adresse.voie}},
+                                    {{maison.adresse.codePostal}}
+                                    {{maison.adresse.ville}}</p>
+                                <p *ngIf="maison.meuble">Meublé</p>
+                                <p *ngIf="!maison.meuble">Non meublé</p>
+                                <p>Nombre de chambres : {{maison.nbchambres}}</p>
+                                <p>Classe énergétique : {{maison.classeNRJ}}</p>
+                                <p>Disponible le : {{maison.date}}</p>
+                            </div>
+                            <div class="card-body" style="font-family: Mademoutain;">
+                                <ul class="list-group ">
+                                    <li class="list-group-item" *ngIf="maison.accessibilite"><i
+                                            class="fab fa-accessible-icon"></i> Handicap Friendly</li>
+                                    <li class="list-group-item" *ngIf="maison.cave">Cave</li>
+                                    <li class="list-group-item">{{maison.nbetages}} étage</li>
+                                    <li class="list-group-item" *ngIf="maison.balcon">Balcon</li>
+                                    <li class="list-group-item" *ngIf="maison.jardin">Jardin</li>
+                                    <li class="list-group-item" *ngIf="maison.laveVaisselle">Lave-Vaisselle</li>
+                                    <li class="list-group-item" *ngIf="maison.machineALaver">Machine à laver</li>
+                                    <li class="list-group-item" *ngIf="maison.salleEau"><i class="fas fa-bath"></i> Salle d'eau
+                                    </li>
+                                    <li class="list-group-item" *ngIf="maison.exposition"><i class="fas fa-sun"></i> Exposition
+                                        {{maison.exposition}}</li>
+                                    <li class="list-group-item" *ngIf="maison.transport"><i class="fas fa-train"></i>
+                                        {{maison.transport}}</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row float-left">
+                                    <div class="col-6 pr-0 pl-5">
+                                        <a (click)="haterAnnonce()" class="card-link" style="color: black;"><b>X</b></a>
+                                    </div>
+                                </div>
+                                <div class="row float-right">
+                                    <div class="col-6 pr-5 pl-0">
+                                        <a (click)="likerAnnonce()" class="card-link" style="color: red;"><i
+                                                class="fas fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <!--<a (click)="" class="card-link">SuperLiker</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

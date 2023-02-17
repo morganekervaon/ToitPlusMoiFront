@@ -1,0 +1,43 @@
+@font-face {
+    font-family: HyperBlobOutline;
+    src: url('../font/hyperblob-outline.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: HyperBlob;
+    src: url('../font/hyperblob.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: Foundland;
+    src: url('../font/foundland.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Mademountain;
+    src: url('../font/mademountain.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.MainLocBody {
+    background-color: rgb(255, 255, 255, 0.6) !important;
+    background-image: url('../../assets/images/2204_w023_n001_2213b_p1_2213.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-attachment: local !important;
+    background-size: cover !important;
+    background-position: center !important;
+    /*font-family: HyperBlob !important;*/
+}
+
+.BGBody {
+    background-color: rgba(253, 227, 240, 0.5) !important;
+    width: 100% !important;
+}

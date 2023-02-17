@@ -1,79 +1,83 @@
-<div class="alert alert-primary" *ngIf="afficher">
-    It's a match !
-</div>
-
-<div class="d-flex justify-content-center m-5">
-    <div class="container" *ngIf="appart==null">
-        <div class="row justify-content-center align-items-center g-2">
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <strong>Il n'y a plus d'appartements qui pourraient te convenir :(</strong>
-            </div>
+<div class="MainLocBody">
+    <div class="BGBody">
+        <div class="alert alert-primary" *ngIf="afficher">
+            It's a match !
         </div>
-    </div>
-
-    <div class="container-fluid" *ngIf="appart!=null">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <div class="card" style="width: auto;">
-                    <img src="../../assets/images/appart.jpeg" class="card-img-top" alt="photo appart">
-                    <div class="card-header center">
-                        <h3 class="card-title text-center"><b>Appartement de {{appart.proprio.prenom}}</b></h3>
-                        <h4>{{appart.prix}} €</h4>
-                        <h4>{{appart.type}} : {{appart.surface}} m²</h4>
-                        <p class="card-text">Adresse : {{appart.adresse.numero}} {{appart.adresse.voie}},
-                            {{appart.adresse.codePostal}}
-                            {{appart.adresse.ville}}</p>
-                        <p *ngIf="appart.meuble">Meublé</p>
-                        <p *ngIf="!appart.meuble">Non meublé</p>
-                        <p>Nombre de chambres : {{appart.nbchambres}}</p>
-                        <p>Classe énergétique : {{appart.classeNRJ}}</p>
-                        <p>Disponible le : {{appart.dispo}}</p>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group ">
-                            <li class="list-group-item" *ngIf="appart.accessibilite"><i
-                                    class="fab fa-accessible-icon"></i> Handicap Friendly
-                            </li>
-                            <li class="list-group-item" *ngIf="appart.cave">Cave</li>
-                            <li class="list-group-item" *ngIf="appart.ascenseur">Avec ascenseur
-                            </li>
-                            <li class="list-group-item" *ngIf="!appart.ascenseur">Sans ascenseur
-                            </li>
-                            <li class="list-group-item" *ngIf="appart.balcon">Balcon</li>
-                            <li class="list-group-item" *ngIf="appart.jardin">Jardin</li>
-                            <li class="list-group-item" *ngIf="appart.laveVaisselle">Lave-Vaisselle</li>
-                            <li class="list-group-item" *ngIf="appart.machineALaver">Machine à laver</li>
-                            <li class="list-group-item" *ngIf="appart.salleEau"><i class="fas fa-bath"></i> Salle d'eau
-                            </li>
-                            <li class="list-group-item" *ngIf="appart.exposition"><i class="fas fa-sun"></i> Exposition
-                                {{appart.exposition}}</li>
-                            <li class="list-group-item" *ngIf="appart.transport"><i class="fas fa-train"></i>
-                                {{appart.transport}}
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row float-left">
-                            <div class="col-6 pr-0 pl-5">
-                                <a (click)="haterAnnonce()" class="card-link" style="color: black;"><b>X</b></a>
-                            </div>
-                        </div>
-                        <div class="row float-right">
-                            <div class="col-6 pr-5 pl-0">
-                                <a (click)="likerAnnonce()" class="card-link" style="color: red;"><i
-                                        class="fas fa-heart"></i></a>
-                            </div>
-                        </div>
-                        <!--<a (click)="" class="card-link">SuperLiker</a>-->
+        
+        <div class="d-flex justify-content-center m-5">
+            <div class="container" *ngIf="appart==null">
+                <div class="row justify-content-center align-items-center g-2">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <strong>Il n'y a plus d'appartements qui pourraient te convenir :(</strong>
                     </div>
                 </div>
             </div>
-            <div class="col"></div>
+        
+            <div class="container-fluid" *ngIf="appart!=null">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <div class="card" style="width: auto;">
+                            <img src="../../assets/images/appart.jpeg" class="card-img-top" alt="photo appart">
+                            <div class="card-header center" style="font-family: Mademoutain;">
+                                <h3 class="card-title text-center" style="font-family: Mademoutain;"><b>Appartement de {{appart.proprio.prenom}}</b></h3>
+                                <h4 style="font-family: Mademoutain;">{{appart.prix}} €</h4>
+                                <h4 style="font-family: Mademoutain;">{{appart.type}} : {{appart.surface}} m²</h4>
+                                <p class="card-text">Adresse : {{appart.adresse.numero}} {{appart.adresse.voie}},
+                                    {{appart.adresse.codePostal}}
+                                    {{appart.adresse.ville}}</p>
+                                <p *ngIf="appart.meuble">Meublé</p>
+                                <p *ngIf="!appart.meuble">Non meublé</p>
+                                <p>Nombre de chambres : {{appart.nbchambres}}</p>
+                                <p>Classe énergétique : {{appart.classeNRJ}}</p>
+                                <p>Disponible le : {{appart.dispo}}</p>
+                            </div>
+                            <div class="card-body" style="font-family: Mademoutain;">
+                                <ul class="list-group ">
+                                    <li class="list-group-item" *ngIf="appart.accessibilite"><i
+                                            class="fab fa-accessible-icon"></i> Handicap Friendly
+                                    </li>
+                                    <li class="list-group-item" *ngIf="appart.cave">Cave</li>
+                                    <li class="list-group-item" *ngIf="appart.ascenseur">Avec ascenseur
+                                    </li>
+                                    <li class="list-group-item" *ngIf="!appart.ascenseur">Sans ascenseur
+                                    </li>
+                                    <li class="list-group-item" *ngIf="appart.balcon">Balcon</li>
+                                    <li class="list-group-item" *ngIf="appart.jardin">Jardin</li>
+                                    <li class="list-group-item" *ngIf="appart.laveVaisselle">Lave-Vaisselle</li>
+                                    <li class="list-group-item" *ngIf="appart.machineALaver">Machine à laver</li>
+                                    <li class="list-group-item" *ngIf="appart.salleEau"><i class="fas fa-bath"></i> Salle d'eau
+                                    </li>
+                                    <li class="list-group-item" *ngIf="appart.exposition"><i class="fas fa-sun"></i> Exposition
+                                        {{appart.exposition}}</li>
+                                    <li class="list-group-item" *ngIf="appart.transport"><i class="fas fa-train"></i>
+                                        {{appart.transport}}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row float-left">
+                                    <div class="col-6 pr-0 pl-5">
+                                        <a (click)="haterAnnonce()" class="card-link" style="color: black;"><b>X</b></a>
+                                    </div>
+                                </div>
+                                <div class="row float-right">
+                                    <div class="col-6 pr-5 pl-0">
+                                        <a (click)="likerAnnonce()" class="card-link" style="color: red;"><i
+                                                class="fas fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <!--<a (click)="" class="card-link">SuperLiker</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

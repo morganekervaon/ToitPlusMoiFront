@@ -10,6 +10,8 @@ import { AuthService } from '../auth.service';
 export class RechercheAppartComponent implements OnInit {
 
   appart: any;
+  match: any;
+  public afficher = false;
   constructor(private authService: AuthService, private route: Router, private http: HttpClient) { };
   private userConnect = this.authService.getUserConnect();
 
@@ -30,6 +32,23 @@ export class RechercheAppartComponent implements OnInit {
       next: (data) => { },
       error: (err) => { console.log(err) }
     })
+
+    this.http.get('http://localhost:8183/allMatchsAppart/' + this.userConnect.id).subscribe({
+      next: (data) => {
+        this.match = data; console.log("1", this.match);
+      },
+      error: (err) => { console.log(err) }
+    });
+
+    console.log("2", this.match);
+    if (this.match != null) {
+      console.log("3", this.match);
+      if (this.match.appart == this.appart) {
+        this.afficher = true;
+        console.log("4", this.match);
+      }
+    }
+
     this.ngOnInit();
     window.scroll({
       top: 0,

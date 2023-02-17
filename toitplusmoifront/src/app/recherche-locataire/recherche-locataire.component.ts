@@ -22,7 +22,6 @@ export class RechercheLocataireComponent implements OnInit {
     this.http.get('http://localhost:8183/user/random').subscribe({
       next: (data) => {
         this.locataire = data;
-        console.log('le locataire est', this.locataire)
       },
       error: (err) => { console.log(err) }
     });
@@ -32,17 +31,17 @@ export class RechercheLocataireComponent implements OnInit {
 
   detail(locat: any) {
     this.http.get('http://localhost:8183/dossier/user/' + locat.id).subscribe({
-        next: (data) => {
-          this.dossier = data;
-          console.log('id est', this.dossier);
-        },
-        error: (err) => { console.log(err); }
-      });
+      next: (data) => {
+        this.dossier = data;
+        console.log('id est', this.dossier);
+      },
+      error: (err) => { console.log(err); }
+    });
   }
 
 
   likerLocataire() {
-    let val = { likeur: this.userConnect, locataireLiked: this.locataire };
+    let val = { likeur: this.userConnect, liked: this.locataire[0] };
     this.http.post('http://localhost:8183/likeproprio', val).subscribe({
       next: (data) => { },
       error: (err) => { console.log(err) }
@@ -51,7 +50,7 @@ export class RechercheLocataireComponent implements OnInit {
   }
 
   haterLocataire() {
-    let val = { likeur: this.userConnect, locataireLiked: this.locataire };
+    let val = { likeur: this.userConnect, liked: this.locataire[0] };
     this.http.post('http://localhost:8183/hateproprio', val).subscribe({
       next: (data) => { },
       error: (err) => { console.log(err) }

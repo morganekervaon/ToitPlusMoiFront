@@ -7,6 +7,7 @@
         <div class="ConnexionBody">
             <div class="card p-4 z-dep-2">
                 <form #co="ngForm" (ngSubmit)="connexion(co.value)">
+                    <h3 class="text-info">On attendait ton retour avec impatience !</h3>
                     <div class="alert alert-danger" *ngIf="msgErr != null">
                         {{msgErr}}
                     </div>
@@ -17,7 +18,7 @@
                         <input type="password" class="form-control" placeholder="password" name="mdp" ngModel>
                     </div>
                     <button type="submit" class="btn btn-success btn-block btn-sm">Connexion</button>
-                    <button type="button" class="btn btn-block btn-sm" routerLink="../inscription">Inscription</button>
+                    <button type="button" class="btn btn-block btn-sm" routerLink="../accueil">Retour</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,76 @@
+.cardLoc {
+    display: flex !important;
+    justify-content: center !important;
+
+}
+
+.cardBien {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 33% !important;
+}
+
+
+.profilBody {
+    background-image: url('../../assets/images/5238964.jpg');
+    background-color: rgb(255, 255, 255, 0.6) !important;
+    background-repeat: no-repeat !important;
+    background-attachment: local !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+}
+
+.BGBody {
+    background-color: rgb(255, 198, 151, 0.5) !important;
+    height: 100vh !important;
+    width: 100% !important;
+}
+
+
+
+.cardLoc {
+    width: 190px;
+    height: 254px;
+    border-radius: 50px;
+    background: #fceddd;
+    box-shadow: 2px 2px 10px #ffe7c7,
+        -2px -2px 10px #ffffff;
+}
+
+.cardLoc h6,
+.cardLoc h5,
+.cardLoc p,
+.cardLoc a,
+.linkLoc {
+    font-family: Mademountain !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.cardLoc h5 {
+    font-size: 1.5vw;
+    color: #00A97F;
+}
+
+.cardLoc h6 {
+    font-size: 1vw;
+}
+
+.linkLoc a {
+    font-size: 1.1vw;
+    color: #00A97F !important;
+}
+
+.titleLoc {
+    text-align: end;
+}
+
+.titleLoc h1 {
+    font-family: HyperBlob !important;
+    font-size: 4vw;
+    /*margin-left: 50%;*/
+    padding-top: 2%;
+    color: #00A97F;
+}

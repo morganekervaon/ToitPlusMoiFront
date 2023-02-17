@@ -26,30 +26,29 @@
                     <div class="card-body center; collapse" id="collapseExample">
                         <h3 class="card-title text-center"><b class="aurion">Autres informations</b></h3>
                         <div>
-                            <h5 class="card-title" *ngIf="m.appart.meuble!=true"> Meublé</h5>
-                            <h5 class="card-title" *ngIf="m.appart.meuble!=false">Non Meublé</h5>
+                            <h5 class="card-title" *ngIf="m.appart.meuble==true"> Meublé</h5>
+                            <h5 class="card-title" *ngIf="m.appart.meuble==false">Non Meublé</h5>
                             <h5 class="card-title">{{m.appart.prix}} € par mois</h5>
-                            <h5 class="card-title">Surface: {{m.appart.surface}}</h5>
+                            <h5 class="card-title">Surface: {{m.appart.surface}} m²</h5>
                             <h5 class="card-title" *ngIf="m.appart.classeNRJ!=null">Classe énergétique:
                                 {{m.appart.classeNRJ}}</h5>
                             <h5 class="card-title">Disponible le : {{m.appart.dispo | date:'d/M/y'}}</h5>
                             <h5 class="card-title">Nombre de chambres: {{m.appart.nbchambres}}</h5>
                             <h5 class="card-title" *ngIf="m.appart.transport!=null">Transports à proximité:
                                 {{m.appart.transport}}</h5>
-                            <h5 class="card-title" *ngIf="m.appart.laveVaisselle!=true">Lave vaisselle présent <i
+                            <h5 class="card-title" *ngIf="m.appart.laveVaisselle==true">Lave vaisselle présent <i
                                     src="../../assets/images/laveVaisselle.ico"></i></h5>
-                            <h5 class="card-title" *ngIf="m.appart.machineALaver!=true">Machine à laver présente</h5>
-                            <h5 class="card-title" *ngIf="m.appart.jardin!=true">Jardin présent</h5>
-                            <h5 class="card-title" *ngIf="m.appart.cave!=true">Cave présente</h5>
-                            <h5 class="card-title" *ngIf="m.appart.balcon!=true">Balcon présent</h5>
-                            <h5 class="card-title" style="color:tomato" *ngIf="m.appart.salleEau!=false">! Attention !
-                                Le propriétaire ne certifie pas qu'il y ait une salle d'eau... (vous devriez fuir...)
-                            </h5>
+                            <h5 class="card-title" *ngIf="m.appart.machineALaver==true">Machine à laver présente</h5>
+                            <h5 class="card-title" *ngIf="m.appart.jardin==true">Jardin présent</h5>
+                            <h5 class="card-title" *ngIf="m.appart.cave==true">Cave présente</h5>
+                            <h5 class="card-title" *ngIf="m.appart.balcon==true">Balcon présent</h5>
+                            <h5 class="card-title" *ngIf="m.appart.parking==true">Parking disponible</h5>
+                            <h5 class="card-title" *ngIf="m.appart.ascenseur==true">Ascenseur présent</h5>
                             <h5 class="card-title" *ngIf="m.appart.exposition!=null">Exposition:
                                 {{m.appart.exposition}}</h5>
-
-
-
+                            <h5 class="card-title" style="color:tomato" *ngIf="m.appart.salle_eau==false">! Attention !
+                                Le propriétaire ne certifie pas qu'il y ait une salle d'eau... (vous devriez fuir...)
+                            </h5>
 
                         </div>
                     </div>
@@ -84,20 +83,46 @@
                         <h5 class="card-title"> {{m.maison.proprio.mail}}</h5>
 
                     </div>
+                    <div class="card-body center; collapse" id="collapse2">
+                        <h3 class="card-title text-center"><b class="aurion">Autres informations</b></h3>
+                        <div>
+                            <h5 class="card-title" *ngIf="m.maison.meuble==true"> Meublé</h5>
+                            <h5 class="card-title" *ngIf="m.maison.meuble==false">Non Meublé</h5>
+                            <h5 class="card-title">{{m.maison.prix}} € par mois</h5>
+                            <h5 class="card-title">Surface: {{m.maison.surface}} m²</h5>
+                            <h5 class="card-title" *ngIf="m.maison.classeNRJ!=null">Classe énergétique:
+                                {{m.maison.classeNRJ}}</h5>
+                            <h5 class="card-title">Disponible le : {{m.maison.dispo | date:'d/M/y'}}</h5>
+                            <h5 class="card-title">Nombre de chambres: {{m.maison.nbchambres}}</h5>
+                            <h5 class="card-title">Nombre de pièces: {{m.maison.nbpieces}}</h5>
+                            <h5 class="card-title" *ngIf="m.maison.transport!=null">Transports à proximité:
+                                {{m.maison.transport}}</h5>
+                            <h5 class="card-title" *ngIf="m.maison.laveVaisselle==true">Lave vaisselle présent <i
+                                    src="../../assets/images/laveVaisselle.ico"></i></h5>
+                            <h5 class="card-title" *ngIf="m.maison.machineALaver==true">Machine à laver présente</h5>
+                            <h5 class="card-title" *ngIf="m.maison.jardin==true">Jardin présent</h5>
+                            <h5 class="card-title" *ngIf="m.maison.cave==true">Cave présente</h5>
+                            <h5 class="card-title" *ngIf="m.maison.balcon==true">Balcon présent</h5>
+                            <h5 class="card-title" *ngIf="m.maison.parking==true">Parking disponible</h5>
+                            <h5 class="card-title" *ngIf="m.maison.exposition!=null">Exposition:
+                                {{m.maison.exposition}}</h5>
+                            <h5 class="card-title" style="color:tomato" *ngIf="m.maison.salle_eau==false">! Attention !
+                                Le propriétaire ne certifie pas qu'il y ait une salle d'eau... (vous devriez fuir...)
+                            </h5>
 
 
 
+                        </div>
+                    </div>
                 </div>
             </div>
+            <br>
+            <hr>
+            <br>
+            <div class="btnSigninDiv">
+                <button (click)="onNoClick()" class="btn btn-sm aurion ">Quitter</button>
+            </div>
+            <br>
+            <hr>
+            <br>
         </div>
-    </div>
-    <br>
-    <hr>
-    <br>
-    <div class="btnSigninDiv">
-        <button (click)="onNoClick()" class="btn btn-sm aurion ">Quitter</button>
-    </div>
-    <br>
-    <hr>
-    <br>
-</div>

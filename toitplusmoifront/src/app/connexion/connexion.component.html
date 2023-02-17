@@ -1,27 +1,21 @@
-<div class="LoginBody">
-    <div class="imgBody">
-        <img src="../../assets/images/logo_siteBis.png" alt="">
-    </div>
-
-    <div style="margin: auto; width: 30%;">
-        <div class="ConnexionBody">
-            <div class="card p-4 z-dep-2">
-                <form #co="ngForm" (ngSubmit)="connexion(co.value)">
-                    <h3 class="text-info">On attendait ton retour avec impatience !</h3>
-                    <div class="alert alert-danger" *ngIf="msgErr != null">
-                        {{msgErr}}
-                    </div>
-                    <div class="md-form">
-                        <input type="text" class="form-control" placeholder="login" name="login" ngModel>
-                    </div>
-                    <div class="md-form">
-                        <input type="password" class="form-control" placeholder="password" name="mdp" ngModel>
-                    </div>
-                    <button type="submit" class="btn btn-success btn-block btn-sm">Connexion</button>
-                    <button type="button" class="btn btn-block btn-sm" routerLink="../accueil">Retour</button>
-                </form>
-            </div>
+<div class="container" style="margin: auto; width: 80%; margin-top: 15%; margin-bottom: 5%;">
+    <form #co="ngForm" (ngSubmit)="connexion(co.value)">
+        <h3 class="text-info">On attendait ton retour avec impatience !</h3>
+        <div class="alert alert-danger" *ngIf="msgErr != null">
+            {{msgErr}}
+        </div>
+        <div class="md-form">
+            <input type="text" class="form-control" placeholder="login" name="login" ngModel>
+        </div>
+        <div class="md-form">
+            <input type="password" class="form-control" placeholder="password" name="mdp" ngModel>
+        </div>
+        <div class="btnSigninDiv">
+            <button (click)="onNoClick()" type="submit" class="btn btn-sm btnSignin">Connexion</button>
+        </div>
+        <div class="btnSigninDiv">
+            <button type="button" class="btn  btn-sm btnSignin2" (click)="onNoClick()">Retour</button>
         </div>
 
-    </div>
+    </form>
 </div>

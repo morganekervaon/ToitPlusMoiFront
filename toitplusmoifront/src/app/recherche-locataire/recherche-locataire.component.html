@@ -4,18 +4,28 @@
             <div class="card" style="width: 30rem;" *ngIf="l==null">
                 <p>Il n'y a plus de locataires à voir :/</p>
             </div>
-            <div class="card cardStyle" *ngIf="l!=null">
-                <div class="card-body center">
-                    <h5 class="card-title">Dossier de {{l.prenom}} {{l.nom}}</h5>
+            <div class="card" style="width: 50%;" *ngIf="l!=null">
+                <div class="card-body center" style="text-align: center; font-family: Foundland;">
+                    <h5 class="card-title text-center" style="font-size: medium; font-family: Foundland;">Dossier de {{l.prenom}} {{l.nom}}</h5>
+                    <img src="../../assets/images/profil.jpg" alt="photo profil">
                     <p class="card-text">Adresse mail : {{l.mail}}</p>
                    <button (click)="detail(l)">Détail du dossier</button>
                    <div *ngIf="dossier != null">
                     <p class="card-text">{{dossier.presentation}}</p>
+                    </div>
                 </div>
-                </div>
-                <div class="card-body">
-                    <a (click)="haterLocataire()" class="card-link">Passer<i class="fas fa-ban"></i></a>
-                    <a (click)="likerLocataire()" class="card-link">Liker<i class="fas fa-heart"></i></a>
+                <div class="card-footer">
+                    <div class="row float-left">
+                        <div class="col-6 pr-0 pl-5">
+                            <a (click)="haterLocataire()" class="card-link" style="color: black;"><b>X</b></a>
+                        </div>
+                    </div>
+                    <div class="row float-right">
+                        <div class="col-6 pr-5 pl-0">
+                            <a (click)="likerLocataire()" class="card-link" style="color: red;"><i
+                                class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

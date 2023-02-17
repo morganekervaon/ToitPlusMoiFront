@@ -5,59 +5,85 @@
         <h1>{{userConnect.prenom}}'s profil</h1>
       </div>
 
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 22rem;">
+        <div class="card-body">
+          <h5 class="card-title">Filtres de critères</h5>
+          <p class="card-text">Tenez à jour vos critères de logement pour s'assurer d'avoir les bonnes annonces
+            recommandées.</p>
+          <a *ngIf="!critere" (click)="openModalFiltre()" class="card-link">Voir ses critères</a>
+          <a *ngIf="!critere" (click)="openModalFiltreModif()" class="card-link">Modifier ses critères</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 22rem;">
+        <div class="card-body">
+          <h5 class="card-title">Liste des matchs</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Retrouvez ici tous vos matchs et leur statut</h6>
+          <p class="card-text">Retrouvez l'historique de tous vos matchs .</p>
+          <a *ngIf="!matchs" (click)="openModalMatchs()" class="card-link">Matchs</a>
+          <a href="#" class="card-link">Historique</a>
 
 
-      <div class="row">
-        <div class="gparent">
 
-          <div class="parent">
-            <div class="col-sm child1">
-              <div class="card cardLoc" style="width: 22rem;">
-                <div class="card-body mt-3">
-                  <h5 class="card-title">Dossier locataire</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Créez votre dossier locataire</h6>
-                  <p class="card-text">Votre dossier locataire permet de vous présenter aux propriétaires. Un dossier
-                    correctement rempli augmentera les chances de match sur le logement de vos rêves !</p>
-                  <div class="linkLoc">
-                    <a routerLink="../dossier" class="card-link">Créer mon dossier</a>
-                    <a routerLink="../modifdossier" class="card-link">Modifier mon dossier</a>
+          <div class="row">
+            <div class="gparent">
+
+              <div class="parent">
+                <div class="col-sm child1">
+                  <div class="card cardLoc" style="width: 22rem;">
+                    <div class="card-body mt-3">
+                      <h5 class="card-title">Dossier locataire</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Créez votre dossier locataire</h6>
+                      <p class="card-text">Votre dossier locataire permet de vous présenter aux propriétaires. Un
+                        dossier
+                        correctement rempli augmentera les chances de match sur le logement de vos rêves !</p>
+                      <div class="linkLoc">
+                        <a routerLink="../dossier" class="card-link">Créer mon dossier</a>
+                        <a routerLink="../modifdossier" class="card-link">Modifier mon dossier</a>
+                      </div>
+
+                    </div>
                   </div>
-
                 </div>
-              </div>
-            </div>
 
-            <div class="col-sm child1 child2">
-              <div class="card cardLoc" style="width: 22rem;">
-                <div class="card-body mt-5">
-                  <h5 class="card-title">Filtres de critères</h5>
-                  <p class="card-text">Tenez à jour vos critères de logement pour s'assurer d'avoir les bonnes annonces
-                    recommandées.</p>
-                  <div class="linkLoc">
-                    <a *ngIf="!critere" (click)="openModalFiltre()" class="card-link">Voir ses critères</a>
-                    <a *ngIf="!critere" (click)="openModalFiltreModif()" class="card-link">Modifier ses critères</a>
+                <div class="col-sm child1 child2">
+                  <div class="card cardLoc" style="width: 22rem;">
+                    <div class="card-body mt-5">
+                      <h5 class="card-title">Filtres de critères</h5>
+                      <p class="card-text">Tenez à jour vos critères de logement pour s'assurer d'avoir les bonnes
+                        annonces
+                        recommandées.</p>
+                      <div class="linkLoc">
+                        <a *ngIf="!critere" (click)="openModalFiltre()" class="card-link">Voir ses critères</a>
+                        <a *ngIf="!critere" (click)="openModalFiltreModif()" class="card-link">Modifier ses critères</a>
+                      </div>
+
+                    </div>
                   </div>
-
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div class="col-sm parent child3">
-            <div class="card cardLoc" style="width: 22rem;">
-              <div class="card-body mt-5">
-                <h5 class="card-title">Liste des matchs</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Retrouvez ici tous vos matchs et leur statut</h6>
-                <p class="card-text">Retrouvez l'historique de tous vos matchs ainsi que ceux que vous n'avez pas
-                  accepté.
-                </p>
-                <div class="linkLoc">
-                  <a *ngIf="!matchs" (click)="openModalMatchs()" class="card-link">Matchs</a>
-                  <a href="#" class="card-link">Historique</a>
+              <div class="col-sm parent child3">
+                <div class="card cardLoc" style="width: 22rem;">
+                  <div class="card-body mt-5">
+                    <h5 class="card-title">Liste des matchs</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Retrouvez ici tous vos matchs et leur statut</h6>
+                    <p class="card-text">Retrouvez l'historique de tous vos matchs ainsi que ceux que vous n'avez pas
+                      accepté.
+                    </p>
+                    <div class="linkLoc">
+                      <a *ngIf="!matchs" (click)="openModalMatchs()" class="card-link">Matchs</a>
+                      <a href="#" class="card-link">Historique</a>
+                    </div>
+
+
+                  </div>
                 </div>
-
-
               </div>
+
             </div>
           </div>
 
@@ -65,6 +91,3 @@
       </div>
 
     </div>
-  </div>
-
-</div>

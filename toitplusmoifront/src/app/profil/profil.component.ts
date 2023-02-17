@@ -24,7 +24,7 @@ export class ProfilComponent implements OnInit {
       this.route.navigateByUrl('profil');
     }
 
-    this.http.get('http://localhost:8183/critere/user' + this.userConnect.id).subscribe({
+    this.http.get('http://localhost:8183/critere/user/' + this.userConnect.id).subscribe({
       next: (data) => {
         this.critere = data;
       },

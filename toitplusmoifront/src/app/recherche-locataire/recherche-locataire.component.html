@@ -1,19 +1,23 @@
-<div class="d-flex justify-content-center m-5" *ngFor="let l of locataire">
-    <div class="card" style="width: 30rem;" *ngIf="l==null">
-        <p>Il n'y a plus de locataires à voir :/</p>
-    </div>
-    <div class="card" style="width: 30rem;" *ngIf="l!=null">
-        <div class="card-body center">
-            <h5 class="card-title">Dossier de {{l.prenom}} {{l.nom}}</h5>
-            <p class="card-text">Adresse mail : {{l.mail}}</p>
-           <button (click)="detail(l)">Détail du dossier</button>
-           <div *ngIf="dossier != null">
-            <p class="card-text">{{dossier.presentation}}</p>
-        </div>
-        </div>
-        <div class="card-body">
-            <a (click)="haterLocataire()" class="card-link">Passer</a>
-            <a (click)="likerLocataire()" class="card-link">Liker</a>
+<div class="MainLocBody p-5">
+    <div class="BGBody">
+        <div class="d-flex justify-content-center m-5" *ngFor="let l of locataire">
+            <div class="card" style="width: 30rem;" *ngIf="l==null">
+                <p>Il n'y a plus de locataires à voir :/</p>
+            </div>
+            <div class="card cardStyle" *ngIf="l!=null">
+                <div class="card-body center">
+                    <h5 class="card-title">Dossier de {{l.prenom}} {{l.nom}}</h5>
+                    <p class="card-text">Adresse mail : {{l.mail}}</p>
+                   <button (click)="detail(l)">Détail du dossier</button>
+                   <div *ngIf="dossier != null">
+                    <p class="card-text">{{dossier.presentation}}</p>
+                </div>
+                </div>
+                <div class="card-body">
+                    <a (click)="haterLocataire()" class="card-link">Passer<i class="fas fa-ban"></i></a>
+                    <a (click)="likerLocataire()" class="card-link">Liker<i class="fas fa-heart"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

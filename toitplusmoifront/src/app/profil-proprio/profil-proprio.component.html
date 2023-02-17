@@ -1,1 +1,73 @@
-<p>profil-proprio works!</p>
+<div class="profilBody">
+    <div class="BGBody">
+        <div class="container ">
+            <div class="titleLoc">
+                <h1>{{userConnect.prenom}}'s profil</h1>
+            </div>
+            <div class="row ml-5 p-4">
+                <div class="col-sm ">
+                    <div class="card cardLoc" style="width: 22rem;">
+                        <div class="card-body mt-3">
+                            <h5 class="card-title">Dossier locataire</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Créez votre dossier locataire</h6>
+                            <p class="card-text">Votre dossier locataire permet de vous présenter aux
+                                propriétaires. Un dossier
+                                correctement rempli augmentera les chances de match sur le logement de vos rêves
+                                !</p>
+                            <div class="linkLoc">
+                                <a (click)="openModalAjBien()" class="card-link">Ajouter un appartement</a>
+                                <a (click)="openModalAjMaison()" class="card-link">Ajouter une maison</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm ">
+                    <div class="card cardLoc" style="width: 22rem;">
+                        <div class="card-body mt-5">
+                            <h5 class="card-title">Liste des matchs</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Retrouvez ici tous vos matchs et leur statut
+                            </h6>
+                            <p class="card-text">Retrouvez l'historique de tous vos matchs ainsi que ceux que vous
+                                n'avez pas
+                                accepté.
+                            </p>
+                            <div class="linkLoc">
+                                <a *ngIf="!matchs" (click)="openModalMatchs()" class="card-link">Matchs</a>
+                                <a href="#" class="card-link">Historique</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row p-3">
+                <div class="cardBien">
+                    <div class="card cardLoc" style="width: 22rem;">
+                        <div class="card-body mt-3">
+                            <h5 class="card-title">Dossier locataire</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Créez votre dossier locataire</h6>
+                            <p class="card-text">Votre dossier locataire permet de vous présenter aux
+                                propriétaires. Un dossier
+                                correctement rempli augmentera les chances de match sur le logement de vos rêves
+                                !</p>
+                            <div class="linkLoc">
+                                <a href="#" class="card-link">Mes biens</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

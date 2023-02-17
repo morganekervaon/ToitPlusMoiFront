@@ -77,10 +77,13 @@
     color: #00A97F !important;
 }
 
+.titleLoc {
+    text-align: end !important;
+}
+
 .titleLoc h1 {
     font-family: HyperBlob !important;
     font-size: 4vw;
-    margin-left: 50%;
     padding-top: 2%;
     color: #00A97F;
 }

@@ -55,6 +55,10 @@
 }
 
 .cardLoc h6 {
+    font-size: 1.2vw;
+}
+
+.cardLoc p {
     font-size: 1vw;
 }
 

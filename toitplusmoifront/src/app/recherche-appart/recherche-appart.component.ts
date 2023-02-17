@@ -36,18 +36,16 @@ export class RechercheAppartComponent implements OnInit {
     this.http.get('http://localhost:8183/allMatchsAppart/' + this.userConnect.id).subscribe({
       next: (data) => {
         this.match = data; console.log("1", this.match);
+        if (this.match != null) {
+          console.log("3", this.match);
+          if (this.match.appart == this.appart) {
+            this.afficher = true;
+            console.log("4", this.match);
+          }
+        }
       },
       error: (err) => { console.log(err) }
     });
-
-    console.log("2", this.match);
-    if (this.match != null) {
-      console.log("3", this.match);
-      if (this.match.appart == this.appart) {
-        this.afficher = true;
-        console.log("4", this.match);
-      }
-    }
 
     this.ngOnInit();
     window.scroll({
